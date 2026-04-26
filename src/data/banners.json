@@ -69,7 +69,7 @@
 		"status": "ready",
 		"source": "desktop",
 		"hasFallback": true,
-		"notes": "Desktop/Banners/red_robin-burger_builder-300x600/release. fallback.jpg = copy of jpg-element.jpg."
+		"notes": "Desktop/Banners/red_robin-burger_builder-300x600/release. fallback.jpg is the static 300×600 burger-builder key art."
 	},
 	{
 		"id": "coke-share-a-name-160x600",
