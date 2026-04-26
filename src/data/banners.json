@@ -81,6 +81,7 @@
 		"status": "ready",
 		"source": "desktop",
 		"hasFallback": true,
-		"notes": "Desktop/Banners/coke-share_a_name-160x600/release. fallback.jpg = copy of jpg-element.jpg."
+		"notes": "Desktop/Banners/coke-share_a_name-160x600/release. fallback.jpg is the provided static 160×600 personalization art."
 	}
 ]
+
