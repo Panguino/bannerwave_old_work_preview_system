@@ -9,6 +9,6 @@
 		"status": "ready",
 		"source": "desktop",
 		"hasFallback": true,
-		"notes": "Imported from Desktop/Banners/FedEx. Meta ad.size 300×600. fallback.jpg rasterized from street.png for grid preview."
+		"notes": "Imported from Desktop/Banners/FedEx. Meta ad.size 300×600. fallback.jpg is the official static fallback art (FedEx truck CTA)."
 	}
 ]
