@@ -57,7 +57,7 @@
 		"status": "ready",
 		"source": "desktop",
 		"hasFallback": true,
-		"notes": "Desktop/Banners/cruzan_rum_plinko-300x600/release. fallback.jpg = copy of jpg-element.jpg."
+		"notes": "Desktop/Banners/cruzan_rum_plinko-300x600/release. fallback.jpg is the static Plinko board art (300×600)."
 	},
 	{
 		"id": "red-robin-burger-builder-300x600",
