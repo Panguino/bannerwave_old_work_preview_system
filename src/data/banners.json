@@ -1,13 +1,14 @@
 [
 	{
-		"id": "sample-300x250",
-		"name": "Sample banner",
+		"id": "fedex",
+		"name": "FedEx — Tetris truck",
 		"width": 300,
-		"height": 250,
-		"keywords": ["sample", "internal"],
-		"suggestedKeywords": ["demo"],
+		"height": 600,
+		"keywords": ["FedEx", "logistics", "HTML5", "game", "300x600"],
+		"suggestedKeywords": ["tetris", "truck", "rich media"],
 		"status": "ready",
-		"source": "manual",
-		"hasFallback": false
+		"source": "desktop",
+		"hasFallback": true,
+		"notes": "Imported from Desktop/Banners/FedEx. Meta ad.size 300×600. fallback.jpg rasterized from street.png for grid preview."
 	}
 ]

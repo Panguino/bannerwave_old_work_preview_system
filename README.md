@@ -25,7 +25,7 @@ npm run dev
 
 - **Home:** [http://localhost:4321/](http://localhost:4321/)
 - **Admin login:** [http://localhost:4321/admin/login](http://localhost:4321/admin/login)
-- **Public preview (example):** [http://localhost:4321/p/sample-300x250/](http://localhost:4321/p/sample-300x250/)
+- **Public preview (FedEx):** [http://localhost:4321/p/fedex/](http://localhost:4321/p/fedex/)
 
 ## Audit local sources
 

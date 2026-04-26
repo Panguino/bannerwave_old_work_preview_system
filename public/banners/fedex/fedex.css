@@ -1,0 +1,107 @@
+/*--------------------- Globals ---------------------*/
+:focus { outline:none; }
+::-moz-focus-inner { border:0; }
+html, body { background-color: #fff; margin: 0; padding: 0; }
+#fedex { background-color: #b5ddf1; position: absolute; top: 0px; left: 0px; width: 300px; height: 600px; overflow: hidden;
+font-family: 'Gotham';
+color: white;
+font-size: 20px;
+line-height: 100%;
+transform-style: preserve-3d;
+perspective: 400;
+-webkit-transform-style: preserve-3d;
+-webkit-perspective: 400;		
+}
+#fedex svg { position: absolute; overflow: hidden; }
+#fedex canvas,
+#fedex div { display: block; overflow: hidden; position: absolute; background: transparent; }
+#fedex img { display: block; width: 100%; height: 100%; position: absolute; }
+
+#fedex .footer { background: #fff; width: 100%; height: 46px; bottom: 0; }
+#fedex .footer .cta { background: transparent; width: 116px; height: 29px; bottom: 8px; right: 11px; cursor: pointer; overflow: visible; }
+#fedex .footer .cta .cta_shadow,
+#fedex .footer .cta .cta_orange { background: #ed6928; width: 100%; height: 100%; border-radius: 3px; -webkit-border-radius: 3px; }
+#fedex .footer .cta .cta_shadow { background: #b9511e; }
+
+#fedex .clouds,
+#fedex .truck { width: 100%; height: 100%; left: 1px; }
+#fedex .truck .truck_tires_tread { width: 100%; height: 21px; top: 473px; }
+#fedex .truck .truck_tires_tread .tread { background: url('truck_tires_tread.png') 0 0 repeat-y; width: 300px; height: 300px;
+background-size: 300px 21px;
+-webkit-background-size: 300px 21px;
+}
+#fedex .truck .truck_tires_tread_shadow { opacity: .4; }
+#fedex .truck .truck_door_end,
+#fedex .truck .truck_door_intro { width: 210px; height: 346px; top: 87px; left: 45px; }
+#fedex .truck .truck_door_end .door_end_content,
+#fedex .truck .truck_door_intro .door_intro_content { width: 100%; height: 100%; }
+#fedex .truck .truck_door_end .cta_replay,
+#fedex .truck .truck_door_intro .cta_play { width: 122px; height: 27px; top: 261px; left: 42px; border: 2px solid #ff6500; border-radius: 3px; -webkit-border-radius: 3px; cursor: pointer; }
+#fedex .truck .truck_door_end .cta_replay { top: 269px; }
+#fedex .truck .truck_door_end .percent_txt { width: 100%; padding-top: 159px; color: #590c90; font-size: 43px; line-height: 100%; text-align: center; }
+
+#fedex .clouds .cloud1 { width: 199px; height: 130px; top: -24px; left: -100px; }
+#fedex .clouds .cloud2 { width: 165px; height: 108px; top: -29px; left: 275px; }
+
+#fedex .score { background: #4d148c; width: 50px; height: 19px; padding: 9px 0 4px 0; top: -3px; left: 50%; margin-left: -25px; border-radius: 3px; -webkit-border-radius: 3px;
+text-align: center;
+font-size: 17px;
+}
+
+#fedex .hud { background: url('saved_next_bg.png') 0 0 no-repeat; width: 66px; height: 66px; top: 11px; background-size: 66px 66px; }
+#fedex .saved { left: 12px; }
+#fedex .next { right: 12px; }
+#fedex .saved .saved_shape_wrapper { width: 66px; height: 66px; }
+#fedex .hud .shape_o { width: 22px; height: 22px; top: 17px; left: 22px; }
+#fedex .hud .shape_i { width: 11px; height: 44px; top: 5px; left: 27px; }
+#fedex .hud .shape_t { width: 33px; height: 22px; top: 17px; left: 17px; }
+#fedex .hud .shape_l { width: 22px; height: 33px; top: 11px; left: 22px; }
+#fedex .hud .shape_s,
+#fedex .hud .shape_z { width: 33px; height: 22px; top: 17px; left: 17px; }
+#fedex .hud .shape { filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, .1)); }
+
+#fedex .current { width: 100%; height: 105px; }
+#fedex .game .shape_o,
+#fedex .current .shape_o { width: 60px; height: 60px; top: 37px; left: 50%; margin-left: -30px; }
+#fedex .game .shape_s,
+#fedex .game .shape_z,
+#fedex .game .shape_t,
+#fedex .current .shape_s,
+#fedex .current .shape_z,
+#fedex .current .shape_t { width: 90px; height: 60px; top: 37px; left: 50%; margin-left: -45px; }
+#fedex .game .shape_i,
+#fedex .current .shape_i { width: 30px; height: 120px; top: 7px; left: 50%; margin-left: -15px;
+transform: rotate(90deg); -webkit-transform: rotate(90deg);
+}
+#fedex .game .shape_l,
+#fedex .current .shape_l { width: 60px; height: 90px; top: 22px; left: 50%; margin-left: -30px;
+transform: rotate(-90deg); -webkit-transform: rotate(-90deg);
+}
+
+#fedex .game_wrapper { width: 210px; height: 344px; bottom: 167px; left: 45px; overflow: hidden; }
+#fedex #tetris,
+#fedex .game { width: 210px; height: 436px; bottom: 0px; left: 0px; overflow: visible; }
+#fedex .game .shape { margin-left: 0px; top: 0px; left: 0px; transform-origin: '0% 0%'; transform: rotate(0deg); -webkit-transform: rotate(0deg); }
+/* #fedex #tetris { top: 0px; left: 0px; } */
+
+#fedex .game .shape_o { left: 60px; }
+#fedex .game .shape_i { left: 60px; }
+#fedex .game .shape_t { left: 60px; }
+#fedex .game .shape_l { left: 90px; }
+#fedex .game .shape_s { left: 60px; }
+#fedex .game .shape_z { left: 60px; }
+
+#fedex .hide { opacity: 0; }
+
+/*--------------------- IE/Utilities ---------------------*/
+#fedex .border { background: #000; }
+#fedex #border_top { width: 100%; height: 1px; }
+#fedex #border_btm { width: 100%; height: 1px; bottom: 0; }
+#fedex #border_left { width: 1px; height: 100%; }
+#fedex #border_right { width: 1px; height: 100%; right: 0; }
+#fedex #background_exit { display: block; overflow: hidden; background: transparent; width: 100%; height: 100%; position: absolute;  }
+#fedex #loading { width: 100%; height: 100%;
+background: #b5ddf1;
+}
+#fedex #loading img { width: 60px; height: 60px; top: 50%; left: 50%; margin: -30px 0 0 -30px; }
+#fedex .hide { display: none; }
