@@ -82,7 +82,7 @@ node scripts/hash-password.mjs "your-plain-password"
 ## Sourcing banners
 
 1. **Primary:** Copy from local folders (e.g. Desktop `Banners`) into `public/banners/<id>/` using an import script (one-at-a-time QA).
-2. **Animere / Banner-Portal:** Repo at `C:\Projects\Bannerwave\BW_Banner_Builder\Banner-Portal-Nextjs` — metadata in Postgres, builds on **S3**. Future importer: download built package → same folder layout as above. Instructions TBD when that phase starts.
+2. **Animere / Banner-Portal:** Repo at `C:\Projects\Bannerwave\BW_Banner_Builder\Banner-Portal-Nextjs` — metadata in Postgres, builds on **S3**. Local Electron output also lands under `BW_Banner_Builder\electron-local-banners\` (paths and project folders **change often**; do not add that tree to the static audit — **search/copy from `…/<banner>/build/`** when importing).
 
 **Audit phase (planned):** Script scans sources → **`docs/banner-inventory.md`** with suggested ids, dimensions, fallback detection, **suggested keywords** (from paths, HTML title/meta, light text heuristics). Import one-by-one; set `status` to `ready` after manual verify.
 

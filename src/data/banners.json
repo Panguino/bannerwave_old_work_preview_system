@@ -10,5 +10,17 @@
 		"source": "desktop",
 		"hasFallback": true,
 		"notes": "Imported from Desktop/Banners/FedEx. Meta ad.size 300×600. fallback.jpg is the official static fallback art (FedEx truck CTA)."
+	},
+	{
+		"id": "apple-watch",
+		"name": "Apple Watch — Series 8 builder",
+		"width": 300,
+		"height": 600,
+		"keywords": ["Apple", "Apple Watch", "HTML5", "retail", "300x600"],
+		"suggestedKeywords": ["Series 8", "configurator", "gamified"],
+		"status": "ready",
+		"source": "animere",
+		"hasFallback": true,
+		"notes": "Copied from Animere local build output: electron-local-banners/gamified-banners-PRJ-CVo7JG0r/apple-watch-300x600/build/ (excludes .zip). That tree changes often — re-copy from build/ if you refresh the banner."
 	}
 ]

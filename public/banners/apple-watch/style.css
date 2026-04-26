@@ -1,0 +1,903 @@
+/* Sprite CSS */
+.png-element {
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 20;
+  background-image: url('png-element.png');
+  background-size: 500px 6066px;
+}
+
+.case-41-0 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 3033px;
+  background-position: 0px 0px;
+}
+
+.case-41-1 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 3033px;
+  background-position: 0px -253px;
+}
+
+.case-41-2 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 3033px;
+  background-position: 0px -506px;
+}
+
+.case-41-3 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 3033px;
+  background-position: 0px -759px;
+}
+
+.case-41-4 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 3033px;
+  background-position: 0px -1012px;
+}
+
+.case-41-5 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 3033px;
+  background-position: 0px -1265px;
+}
+
+.case-45-0 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 3033px;
+  background-position: 0px -1518px;
+}
+
+.case-45-1 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 3033px;
+  background-position: 0px -1771px;
+}
+
+.case-45-2 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 3033px;
+  background-position: 0px -2024px;
+}
+
+.case-45-3 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 3033px;
+  background-position: 0px -2277px;
+}
+
+.case-45-4 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 3033px;
+  background-position: 0px -2530px;
+}
+
+.case-45-5 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 3033px;
+  background-position: 0px -2783px;
+}
+
+.jpg-element {
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 20;
+  background-image: url('jpg-element.jpg');
+  background-size: 500px 39462px;
+}
+
+.band-41-0 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px 0px;
+}
+
+.band-41-10 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -253px;
+}
+
+.band-41-11 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -506px;
+}
+
+.band-41-12 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -759px;
+}
+
+.band-41-13 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -1012px;
+}
+
+.band-41-14 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -1265px;
+}
+
+.band-41-15 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -1518px;
+}
+
+.band-41-16 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -1771px;
+}
+
+.band-41-17 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -2024px;
+}
+
+.band-41-18 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -2277px;
+}
+
+.band-41-19 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -2530px;
+}
+
+.band-41-1 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -2783px;
+}
+
+.band-41-20 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -3036px;
+}
+
+.band-41-21 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -3289px;
+}
+
+.band-41-22 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -3542px;
+}
+
+.band-41-23 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -3795px;
+}
+
+.band-41-24 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -4048px;
+}
+
+.band-41-25 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -4301px;
+}
+
+.band-41-26 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -4554px;
+}
+
+.band-41-27 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -4807px;
+}
+
+.band-41-28 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -5060px;
+}
+
+.band-41-29 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -5313px;
+}
+
+.band-41-2 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -5566px;
+}
+
+.band-41-30 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -5819px;
+}
+
+.band-41-31 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -6072px;
+}
+
+.band-41-32 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -6325px;
+}
+
+.band-41-33 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -6578px;
+}
+
+.band-41-34 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -6831px;
+}
+
+.band-41-35 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -7084px;
+}
+
+.band-41-36 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -7337px;
+}
+
+.band-41-37 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -7590px;
+}
+
+.band-41-38 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -7843px;
+}
+
+.band-41-3 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -8096px;
+}
+
+.band-41-4 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -8349px;
+}
+
+.band-41-5 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -8602px;
+}
+
+.band-41-6 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -8855px;
+}
+
+.band-41-7 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -9108px;
+}
+
+.band-41-8 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -9361px;
+}
+
+.band-41-9 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -9614px;
+}
+
+.band-45-0 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -9867px;
+}
+
+.band-45-10 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -10120px;
+}
+
+.band-45-11 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -10373px;
+}
+
+.band-45-12 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -10626px;
+}
+
+.band-45-13 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -10879px;
+}
+
+.band-45-14 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -11132px;
+}
+
+.band-45-15 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -11385px;
+}
+
+.band-45-16 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -11638px;
+}
+
+.band-45-17 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -11891px;
+}
+
+.band-45-18 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -12144px;
+}
+
+.band-45-19 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -12397px;
+}
+
+.band-45-1 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -12650px;
+}
+
+.band-45-20 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -12903px;
+}
+
+.band-45-21 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -13156px;
+}
+
+.band-45-22 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -13409px;
+}
+
+.band-45-23 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -13662px;
+}
+
+.band-45-24 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -13915px;
+}
+
+.band-45-25 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -14168px;
+}
+
+.band-45-26 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -14421px;
+}
+
+.band-45-27 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -14674px;
+}
+
+.band-45-28 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -14927px;
+}
+
+.band-45-29 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -15180px;
+}
+
+.band-45-2 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -15433px;
+}
+
+.band-45-30 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -15686px;
+}
+
+.band-45-31 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -15939px;
+}
+
+.band-45-32 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -16192px;
+}
+
+.band-45-33 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -16445px;
+}
+
+.band-45-34 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -16698px;
+}
+
+.band-45-35 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -16951px;
+}
+
+.band-45-36 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -17204px;
+}
+
+.band-45-37 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -17457px;
+}
+
+.band-45-38 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -17710px;
+}
+
+.band-45-3 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -17963px;
+}
+
+.band-45-4 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -18216px;
+}
+
+.band-45-5 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -18469px;
+}
+
+.band-45-6 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -18722px;
+}
+
+.band-45-7 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -18975px;
+}
+
+.band-45-8 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -19228px;
+}
+
+.band-45-9 {
+  width: 250px;
+  height: 250px;
+  background-size: 250px 19731px;
+  background-position: 0px -19481px;
+}
+
+
+/* Reserved: future generation scripts */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  background: #FFFFFF;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-text-size-adjust: 100%;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.wrapper {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  -webkit-transform: translateZ(0px);
+}
+
+.banner {
+  width: 300px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+.banner .border {
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.7);
+}
+.banner .border-top {
+  width: 300px;
+  height: 1px;
+  top: 0px;
+  left: 0px;
+}
+.banner .border-bottom {
+  width: 300px;
+  height: 1px;
+  bottom: 0px;
+  left: 0px;
+}
+.banner .border-left {
+  height: 598px;
+  width: 1px;
+  top: 1px;
+  left: 0px;
+}
+.banner .border-right {
+  height: 598px;
+  width: 1px;
+  top: 1px;
+  right: 0px;
+}
+.banner .stage {
+  position: absolute;
+  z-index: 7;
+  width: 300px;
+  height: 600px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.float {
+  position: absolute;
+  display: block;
+  z-index: 20;
+}
+
+.appleWatchLogo {
+  top: 14px;
+  left: 83px;
+}
+
+.series {
+  top: 57px;
+  left: 111px;
+}
+
+.sizeNamesContainer {
+  top: 365px;
+  width: 300px;
+  height: 80px;
+}
+
+.caseNamesContainer {
+  top: 391px;
+  width: 300px;
+  height: 50px;
+}
+
+.bandNamesContainer {
+  top: 410px;
+  width: 300px;
+  height: 50px;
+}
+
+.pricesContainer {
+  top: 501px;
+  width: 300px;
+  height: 50px;
+}
+
+.size-name, .case-name, .band-name, .price {
+  width: 300px;
+  margin: auto;
+}
+
+.sizesContainer {
+  top: 91px;
+  left: 80px;
+  width: 300px;
+  height: 250px;
+}
+.sizesContainer .caseBtn, .sizesContainer .bandBtn {
+  width: 146px;
+  height: 250px;
+  left: 0px;
+  overflow: hidden;
+}
+.sizesContainer .caseBtn .case, .sizesContainer .caseBtn .band, .sizesContainer .bandBtn .case, .sizesContainer .bandBtn .band {
+  left: -52px;
+}
+.sizesContainer .bandsContainer {
+  overflow: visible;
+}
+.sizesContainer .selected {
+  opacity: 1;
+  visibility: true;
+}
+.sizesContainer .hidden {
+  opacity: 0;
+  visibility: false;
+}
+
+.arrowsContainer {
+  top: 150px;
+  width: 300px;
+  height: 25px;
+}
+.arrowsContainer .arrowLeft {
+  top: 60px;
+  left: 20px;
+}
+.arrowsContainer .arrowRight {
+  top: 60px;
+  right: 20px;
+}
+.arrowsContainer .arrow-L {
+  width: 65px;
+  height: 150px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  pointer-events: auto;
+}
+.arrowsContainer .arrow-R {
+  width: 65px;
+  height: 150px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  pointer-events: auto;
+}
+.arrowsContainer path {
+  pointer-events: none;
+}
+
+.optionsContainer {
+  top: 446px;
+  width: 300px;
+  height: 40px;
+  margin: auto;
+}
+.optionsContainer .btnSize {
+  left: 24px;
+}
+.optionsContainer .btnCase {
+  left: 108px;
+}
+.optionsContainer .btnBand {
+  right: 24px;
+}
+.optionsContainer .optionBtn {
+  transition: 1s;
+  cursor: pointer;
+}
+.optionsContainer .optionBtn path, .optionsContainer .optionBtn rect {
+  transition: 0.3s ease;
+}
+.optionsContainer .optionBtn .btnBG {
+  fill: #E5E5E5;
+  pointer-events: none;
+}
+.optionsContainer .optionBtn .btnIcon {
+  fill: #333333;
+  pointer-events: none;
+}
+.optionsContainer .optionBtn:hover .btnBG {
+  fill: #333333;
+}
+.optionsContainer .optionBtn:hover .btnIcon {
+  fill: #E5E5E5;
+}
+.optionsContainer .selected {
+  pointer-events: none;
+}
+.optionsContainer .selected .btnBG {
+  fill: #333333;
+}
+.optionsContainer .selected .btnIcon {
+  fill: #E5E5E5;
+}
+
+.footer {
+  border-top: 2px solid #E5E5E5;
+  background-color: #FFFFFF;
+  width: 300px;
+  height: 63px;
+  bottom: 0px;
+}
+.footer .cta-button {
+  top: 13px;
+  left: 91px;
+  transition: 1s;
+  margin: auto;
+  cursor: pointer;
+}
+.footer .cta-button path,
+.footer .cta-button rect {
+  transition: 0.25s ease;
+}
+.footer .cta-button .btnBG {
+  fill: #0071E3;
+  pointer-events: none;
+}
+.footer .cta-button .btnIcon {
+  fill: #FFFFFF;
+  pointer-events: none;
+}
+.footer .cta-button:hover .btnBG {
+  fill: #2480f2;
+}
+.footer .cta-button:hover .btnIcon {
+  fill: #FFFFFF;
+}
