@@ -33,7 +33,7 @@
 		"status": "ready",
 		"source": "desktop",
 		"hasFallback": true,
-		"notes": "Desktop/Banners/go_comics-awkward_yeti-540x960/release. fallback.jpg copied from jpg-element.jpg (sprite sheet) for grid thumbnail."
+		"notes": "Desktop/Banners/go_comics-awkward_yeti-540x960/release. fallback.jpg is the provided static 540×960 key art."
 	},
 	{
 		"id": "cruzan-rum-plinko-300x250",
@@ -84,4 +84,5 @@
 		"notes": "Desktop/Banners/coke-share_a_name-160x600/release. fallback.jpg is the provided static 160×600 personalization art."
 	}
 ]
+
 
