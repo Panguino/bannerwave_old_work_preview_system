@@ -25,7 +25,7 @@ npm run dev
 
 - **Home:** [http://localhost:4321/](http://localhost:4321/)
 - **Admin login:** [http://localhost:4321/admin/login](http://localhost:4321/admin/login)
-- **Public previews:** [FedEx](http://localhost:4321/p/fedex/) · [Apple Watch](http://localhost:4321/p/apple-watch/)
+- **Public previews:** `/p/<id>/` — see `src/data/banners.json` for ids (e.g. [FedEx](http://localhost:4321/p/fedex/), [Apple Watch](http://localhost:4321/p/apple-watch/), [Cruzan 300×250](http://localhost:4321/p/cruzan-rum-plinko-300x250/)).
 
 ## Audit local sources
 

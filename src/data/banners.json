@@ -22,5 +22,65 @@
 		"source": "animere",
 		"hasFallback": true,
 		"notes": "Copied from Animere local build output: electron-local-banners/gamified-banners-PRJ-CVo7JG0r/apple-watch-300x600/build/ (excludes .zip). That tree changes often — re-copy from build/ if you refresh the banner."
+	},
+	{
+		"id": "go-comics-awkward-yeti-540x960",
+		"name": "GoComics — Awkward Yeti",
+		"width": 540,
+		"height": 960,
+		"keywords": ["GoComics", "Awkward Yeti", "comics", "HTML5", "540x960"],
+		"suggestedKeywords": ["vertical", "mobile"],
+		"status": "ready",
+		"source": "desktop",
+		"hasFallback": true,
+		"notes": "Desktop/Banners/go_comics-awkward_yeti-540x960/release. fallback.jpg copied from jpg-element.jpg (sprite sheet) for grid thumbnail."
+	},
+	{
+		"id": "cruzan-rum-plinko-300x250",
+		"name": "Cruzan Rum — Plinko",
+		"width": 300,
+		"height": 250,
+		"keywords": ["Cruzan", "rum", "plinko", "HTML5", "300x250"],
+		"suggestedKeywords": ["beverage", "game"],
+		"status": "ready",
+		"source": "desktop",
+		"hasFallback": true,
+		"notes": "Desktop/Banners/cruzan_rum_plinko-300x250/release. fallback.jpg = copy of jpg-element.jpg."
+	},
+	{
+		"id": "cruzan-rum-plinko-300x600",
+		"name": "Cruzan Rum — Plinko",
+		"width": 300,
+		"height": 600,
+		"keywords": ["Cruzan", "rum", "plinko", "HTML5", "300x600"],
+		"suggestedKeywords": ["beverage", "game"],
+		"status": "ready",
+		"source": "desktop",
+		"hasFallback": true,
+		"notes": "Desktop/Banners/cruzan_rum_plinko-300x600/release. fallback.jpg = copy of jpg-element.jpg."
+	},
+	{
+		"id": "red-robin-burger-builder-300x600",
+		"name": "Red Robin — Burger Builder",
+		"width": 300,
+		"height": 600,
+		"keywords": ["Red Robin", "restaurant", "burger", "HTML5", "300x600"],
+		"suggestedKeywords": ["QSR", "food"],
+		"status": "ready",
+		"source": "desktop",
+		"hasFallback": true,
+		"notes": "Desktop/Banners/red_robin-burger_builder-300x600/release. fallback.jpg = copy of jpg-element.jpg."
+	},
+	{
+		"id": "coke-share-a-name-160x600",
+		"name": "Coca-Cola — Share A Name",
+		"width": 160,
+		"height": 600,
+		"keywords": ["Coca-Cola", "Coke", "HTML5", "160x600"],
+		"suggestedKeywords": ["beverage", "personalization"],
+		"status": "ready",
+		"source": "desktop",
+		"hasFallback": true,
+		"notes": "Desktop/Banners/coke-share_a_name-160x600/release. fallback.jpg = copy of jpg-element.jpg."
 	}
 ]
