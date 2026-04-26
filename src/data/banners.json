@@ -1,7 +1,7 @@
 [
 	{
 		"id": "fedex",
-		"name": "FedEx — Tetris truck",
+		"name": "FedEx ??? Tetris truck",
 		"width": 300,
 		"height": 600,
 		"keywords": ["FedEx", "logistics", "HTML5", "game", "300x600"],
@@ -9,11 +9,11 @@
 		"status": "ready",
 		"source": "desktop",
 		"hasFallback": true,
-		"notes": "Imported from Desktop/Banners/FedEx. Meta ad.size 300×600. fallback.jpg is the official static fallback art (FedEx truck CTA)."
+		"notes": "Imported from Desktop/Banners/FedEx. Meta ad.size 300??600. fallback.jpg is the official static fallback art (FedEx truck CTA)."
 	},
 	{
 		"id": "apple-watch",
-		"name": "Apple Watch — Series 8 builder",
+		"name": "Apple Watch ??? Series 8 builder",
 		"width": 300,
 		"height": 600,
 		"keywords": ["Apple", "Apple Watch", "HTML5", "retail", "300x600"],
@@ -21,11 +21,11 @@
 		"status": "ready",
 		"source": "animere",
 		"hasFallback": true,
-		"notes": "Copied from Animere local build output: electron-local-banners/gamified-banners-PRJ-CVo7JG0r/apple-watch-300x600/build/ (excludes .zip). That tree changes often — re-copy from build/ if you refresh the banner."
+		"notes": "Copied from Animere local build output: electron-local-banners/gamified-banners-PRJ-CVo7JG0r/apple-watch-300x600/build/ (excludes .zip). That tree changes often ??? re-copy from build/ if you refresh the banner."
 	},
 	{
 		"id": "go-comics-awkward-yeti-540x960",
-		"name": "GoComics — Awkward Yeti",
+		"name": "GoComics ??? Awkward Yeti",
 		"width": 540,
 		"height": 960,
 		"keywords": ["GoComics", "Awkward Yeti", "comics", "HTML5", "540x960"],
@@ -33,11 +33,11 @@
 		"status": "ready",
 		"source": "desktop",
 		"hasFallback": true,
-		"notes": "Desktop/Banners/go_comics-awkward_yeti-540x960/release. fallback.jpg is the provided static 540�960 key art."
+		"notes": "Desktop/Banners/go_comics-awkward_yeti-540x960/release. fallback.jpg is the provided static 540?960 key art."
 	},
 	{
 		"id": "cruzan-rum-plinko-300x250",
-		"name": "Cruzan Rum — Plinko",
+		"name": "Cruzan Rum ??? Plinko",
 		"width": 300,
 		"height": 250,
 		"keywords": ["Cruzan", "rum", "plinko", "HTML5", "300x250"],
@@ -45,11 +45,11 @@
 		"status": "ready",
 		"source": "desktop",
 		"hasFallback": true,
-		"notes": "Desktop/Banners/cruzan_rum_plinko-300x250/release. fallback.jpg is the provided static 300�250 Plinko crop."
+		"notes": "Desktop/Banners/cruzan_rum_plinko-300x250/release. fallback.jpg is the provided static 300?250 Plinko crop."
 	},
 	{
 		"id": "cruzan-rum-plinko-300x600",
-		"name": "Cruzan Rum — Plinko",
+		"name": "Cruzan Rum ??? Plinko",
 		"width": 300,
 		"height": 600,
 		"keywords": ["Cruzan", "rum", "plinko", "HTML5", "300x600"],
@@ -57,11 +57,11 @@
 		"status": "ready",
 		"source": "desktop",
 		"hasFallback": true,
-		"notes": "Desktop/Banners/cruzan_rum_plinko-300x600/release. fallback.jpg is the static Plinko board art (300×600)."
+		"notes": "Desktop/Banners/cruzan_rum_plinko-300x600/release. fallback.jpg is the static Plinko board art (300??600)."
 	},
 	{
 		"id": "red-robin-burger-builder-300x600",
-		"name": "Red Robin — Burger Builder",
+		"name": "Red Robin ??? Burger Builder",
 		"width": 300,
 		"height": 600,
 		"keywords": ["Red Robin", "restaurant", "burger", "HTML5", "300x600"],
@@ -69,11 +69,11 @@
 		"status": "ready",
 		"source": "desktop",
 		"hasFallback": true,
-		"notes": "Desktop/Banners/red_robin-burger_builder-300x600/release. fallback.jpg is the static 300×600 burger-builder key art."
+		"notes": "Desktop/Banners/red_robin-burger_builder-300x600/release. fallback.jpg is the static 300??600 burger-builder key art."
 	},
 	{
 		"id": "coke-share-a-name-160x600",
-		"name": "Coca-Cola — Share A Name",
+		"name": "Coca-Cola ??? Share A Name",
 		"width": 160,
 		"height": 600,
 		"keywords": ["Coca-Cola", "Coke", "HTML5", "160x600"],
@@ -81,9 +81,34 @@
 		"status": "ready",
 		"source": "desktop",
 		"hasFallback": true,
-		"notes": "Desktop/Banners/coke-share_a_name-160x600/release. fallback.jpg is the provided static 160�600 personalization art."
+		"notes": "Desktop/Banners/coke-share_a_name-160x600/release. fallback.jpg is the provided static 160?600 personalization art."
+	},
+	{
+		"id": "troybilt-overtested-game-300x600",
+		"name": "Troy-Bilt - Overtested Game",
+		"width": 300,
+		"height": 600,
+		"keywords": ["Troy-Bilt", "game", "HTML5", "300x600", "interactive"],
+		"suggestedKeywords": ["lawn mower", "challenge", "timed"],
+		"status": "ready",
+		"source": "desktop",
+		"hasFallback": true,
+		"notes": "Desktop/Banners/troybilt_overtested_game-300x600. Source HTML is troybilt_overtested_game-300x600.html; copied to index.html for preview route. fallback.jpg is provided static 300�600 key art."
+	},
+	{
+		"id": "troybilt-snow-campaign-cleanup-300x600",
+		"name": "Troy-Bilt - Snow Campaign (Cleanup)",
+		"width": 300,
+		"height": 600,
+		"keywords": ["Troy-Bilt", "snow", "winter", "HTML5", "300x600", "game"],
+		"suggestedKeywords": ["snow blower", "campaign", "interactive"],
+		"status": "ready",
+		"source": "desktop",
+		"hasFallback": true,
+		"notes": "Desktop/Banners/Bannerwave/troybilt/_snow_campaign-cleanup-300x600. Clicktag/Enabler references sanitized for preview; local shim handles Enabler APIs."
 	}
 ]
+
 
 
 
