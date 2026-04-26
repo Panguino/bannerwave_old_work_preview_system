@@ -2,9 +2,38 @@
 interface Props {
 	title: string;
 	description?: string;
+	/** Path (e.g. `/og-default.webp`) or full https URL. Defaults to BannerWave social art. */
+	ogImage?: string;
+	ogTitle?: string;
+	ogDescription?: string;
+	ogType?: string;
+	twitterCard?: 'summary' | 'summary_large_image';
 }
 
-const { title, description = 'BannerWave archived work preview.' } = Astro.props;
+const {
+	title,
+	description = 'BannerWave archived work preview.',
+	ogImage,
+	ogTitle,
+	ogDescription,
+	ogType = 'website',
+	twitterCard = 'summary_large_image',
+} = Astro.props;
+
+const siteOrigin = Astro.url.origin;
+const canonical = new URL(Astro.url.pathname, siteOrigin).href;
+
+function toAbsolute(urlOrPath: string): string {
+	if (urlOrPath.startsWith('http://') || urlOrPath.startsWith('https://')) {
+		return urlOrPath;
+	}
+	return new URL(urlOrPath, siteOrigin).href;
+}
+
+const defaultOgImage = '/og-default.webp';
+const ogImageAbs = toAbsolute(ogImage ?? defaultOgImage);
+const metaTitle = ogTitle ?? title;
+const metaDescription = ogDescription ?? description;
 ---
 
 <!doctype html>
@@ -12,8 +41,21 @@ const { title, description = 'BannerWave archived work preview.' } = Astro.props
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content={description} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content={metaDescription} />
+		<link rel="canonical" href={canonical} />
+		<meta property="og:site_name" content="BannerWave" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content={ogType} />
+		<meta property="og:title" content={metaTitle} />
+		<meta property="og:description" content={metaDescription} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={ogImageAbs} />
+		<meta name="twitter:card" content={twitterCard} />
+		<meta name="twitter:title" content={metaTitle} />
+		<meta name="twitter:description" content={metaDescription} />
+		<meta name="twitter:image" content={ogImageAbs} />
+		<link rel="icon" href="/favicon-bw.ico" sizes="any" />
+		<link rel="shortcut icon" href="/favicon-bw.ico" type="image/x-icon" />
 		<title>{title}</title>
 		<style is:global>
 			:root {

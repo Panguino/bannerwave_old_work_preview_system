@@ -1,6 +1,6 @@
 ---
 import BrandLayout from '../../layouts/BrandLayout.astro';
-import { getBannerById, bannerEntryUrl } from '../../lib/banners';
+import { getBannerById, bannerEntryUrl, bannerFallbackUrl } from '../../lib/banners';
 
 const { id } = Astro.params;
 const b = id ? getBannerById(id) : undefined;
@@ -8,9 +8,21 @@ const b = id ? getBannerById(id) : undefined;
 if (!b) {
 	Astro.response.status = 404;
 }
+
+const previewDescription = b
+	? [b.name, `${b.width}×${b.height}`, b.notes].filter(Boolean).join(' · ') +
+			' — BannerWave work preview.'
+	: undefined;
+const ogImage = b && b.hasFallback ? bannerFallbackUrl(b.id) : undefined;
 ---
 
-<BrandLayout title={b ? `${b.name} — Preview` : 'Not found'}>
+<BrandLayout
+	title={b ? `${b.name} — Preview` : 'Not found'}
+	description={previewDescription ?? 'This preview is not in the archive.'}
+	ogTitle={b ? `${b.name} — Preview` : 'Preview not found — BannerWave'}
+	ogDescription={previewDescription}
+	ogImage={ogImage}
+>
 	{
 		b ? (
 			<div
