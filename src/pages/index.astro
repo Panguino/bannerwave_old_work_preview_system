@@ -1,0 +1,30 @@
+---
+import BrandLayout from '../layouts/BrandLayout.astro';
+---
+
+<BrandLayout
+	title="BannerWave — Work preview"
+	description="Internal preview of archived interactive banners. Visit bannerwave.com for our main site."
+>
+	<main
+		style="max-width: 42rem; margin: 0 auto; padding: 3rem 1.5rem 4rem; text-align: center;"
+	>
+		<p style="color: var(--bw-muted); font-size: 0.9rem; margin: 0 0 1.5rem; letter-spacing: 0.04em;">
+			BannerWave
+		</p>
+		<h1 style="font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; margin: 0 0 1rem; line-height: 1.2;">
+			Intelligent digital experiences that drive <span style="color: var(--bw-orange);">business growth.</span>
+		</h1>
+		<p style="color: var(--bw-muted); font-size: 1.05rem; margin: 0 0 2rem;">
+			This URL hosts an archived preview of our work — interactive, personalized, and gamified digital
+			solutions. If you landed here by mistake, head to our main site.
+		</p>
+		<div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
+			<a class="bw-btn bw-btn-orange" href="https://bannerwave.com/"> Visit BannerWave </a>
+			<a class="bw-btn bw-btn-teal" href="https://bannerwave.com/"> See the difference </a>
+		</div>
+		<p style="margin-top: 2.5rem; font-size: 0.85rem; color: var(--bw-muted);">
+			Admin access: <a href="/admin/login">Sign in</a>
+		</p>
+	</main>
+</BrandLayout>

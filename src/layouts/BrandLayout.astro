@@ -1,0 +1,88 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = 'BannerWave archived work preview.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+		<style is:global>
+			:root {
+				--bw-bg: #121e26;
+				--bw-bg-elevated: #1a2a36;
+				--bw-text: #f1f5f9;
+				--bw-muted: #94a3b8;
+				--bw-orange: #f97316;
+				--bw-teal: #2dd4bf;
+				--bw-border: #334155;
+				--bw-font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+			}
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0;
+				min-height: 100vh;
+				font-family: var(--bw-font);
+				background: var(--bw-bg);
+				color: var(--bw-text);
+				line-height: 1.5;
+			}
+			a {
+				color: var(--bw-teal);
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+			.bw-btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0.65rem 1.35rem;
+				border-radius: 9999px;
+				font-weight: 600;
+				font-size: 0.95rem;
+				text-decoration: none;
+				border: none;
+				cursor: pointer;
+				transition: opacity 0.15s;
+			}
+			.bw-btn:hover {
+				opacity: 0.92;
+				text-decoration: none;
+			}
+			.bw-btn-orange {
+				background: var(--bw-orange);
+				color: #fff;
+			}
+			.bw-btn-teal {
+				background: var(--bw-teal);
+				color: #0f172a;
+			}
+			.bw-btn-ghost {
+				background: transparent;
+				color: var(--bw-muted);
+				border: 1px solid var(--bw-border);
+			}
+			.bw-card {
+				background: var(--bw-bg-elevated);
+				border: 1px solid var(--bw-border);
+				border-radius: 12px;
+			}
+		</style>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

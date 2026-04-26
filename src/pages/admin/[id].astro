@@ -1,0 +1,101 @@
+---
+import BrandLayout from '../../layouts/BrandLayout.astro';
+import { getBannerById, bannerEntryUrl, bannerFallbackUrl } from '../../lib/banners';
+
+const { id } = Astro.params;
+const b = id ? getBannerById(id) : undefined;
+
+if (!b) {
+	Astro.response.status = 404;
+}
+---
+
+<BrandLayout title={b ? `${b.name} — Admin` : 'Not found'}>
+	{
+		b ? (
+			<div style="max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem 3rem;">
+				<p style="margin: 0 0 1rem;">
+					<a href="/admin" style="color: var(--bw-muted); font-size: 0.9rem;">
+						← All banners
+					</a>
+				</p>
+				<header style="margin-bottom: 1.25rem;">
+					<h1 style="font-size: 1.5rem; margin: 0 0 0.35rem;">{b.name}</h1>
+					<p style="margin: 0; color: var(--bw-muted); font-size: 0.9rem;">
+						{b.width}×{b.height} · {b.status}
+						{b.source && ` · ${b.source}`}
+					</p>
+					{b.keywords.length > 0 && (
+						<p style="margin: 0.75rem 0 0; font-size: 0.85rem;">
+							{b.keywords.join(' · ')}
+						</p>
+					)}
+				</header>
+
+				<div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem;">
+					<button type="button" class="bw-btn bw-btn-teal" id="bw-copy">
+						Copy public link
+					</button>
+					<a
+						class="bw-btn bw-btn-orange"
+						href={`/p/${b.id}/`}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Open public preview
+					</a>
+					<a class="bw-btn bw-btn-ghost" href={bannerEntryUrl(b.id)} target="_blank" rel="noopener noreferrer">
+						Open raw HTML
+					</a>
+				</div>
+
+				<div
+					class="bw-card"
+					style={`padding: 1rem; display: flex; justify-content: center; align-items: center; min-height: 12rem;`}
+				>
+					<iframe
+						src={bannerEntryUrl(b.id)}
+						title={b.name}
+						width={b.width}
+						height={b.height}
+						style="border: 0; max-width: 100%; background: #000;"
+					/>
+				</div>
+
+				{b.notes && (
+					<p style="margin-top: 1rem; font-size: 0.875rem; color: var(--bw-muted);">{b.notes}</p>
+				)}
+
+				<form method="post" action="/api/auth/logout" style="margin-top: 2rem;">
+					<button type="submit" class="bw-btn bw-btn-ghost" style="font-size: 0.875rem;">
+						Sign out
+					</button>
+				</form>
+			</div>
+		) : (
+			<main style="padding: 3rem 1.5rem; text-align: center;">
+				<h1 style="font-size: 1.25rem;">Banner not found</h1>
+				<p style="color: var(--bw-muted);">
+					<a href="/admin">Back to grid</a>
+				</p>
+			</main>
+		)
+	}
+
+	{b && (
+		<script define:vars={{ publicUrl: new URL(`/p/${b.id}/`, Astro.url).href }}>
+			const btn = document.getElementById('bw-copy');
+			btn?.addEventListener('click', async () => {
+				try {
+					await navigator.clipboard.writeText(publicUrl);
+					btn.textContent = 'Copied!';
+					setTimeout(() => {
+						btn.textContent = 'Copy public link';
+					}, 2000);
+				} catch {
+					btn.textContent = 'Copy failed';
+				}
+			});
+		</script>
+	)}
+</BrandLayout>

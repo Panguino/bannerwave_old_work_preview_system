@@ -1,0 +1,25 @@
+{
+	"name": "bannerwave-old-work-preview-system",
+	"type": "module",
+	"version": "0.0.1",
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"hash-password": "node scripts/hash-password.mjs"
+	},
+	"dependencies": {
+		"@astrojs/vercel": "^10.0.5",
+		"astro": "^6.1.9",
+		"bcryptjs": "^3.0.2",
+		"jose": "^6.0.10"
+	},
+	"devDependencies": {
+		"@types/bcryptjs": "^2.4.6",
+		"typescript": "^5.7.3"
+	}
+}

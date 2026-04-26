@@ -1,0 +1,13 @@
+[
+	{
+		"id": "sample-300x250",
+		"name": "Sample banner",
+		"width": 300,
+		"height": 250,
+		"keywords": ["sample", "internal"],
+		"suggestedKeywords": ["demo"],
+		"status": "ready",
+		"source": "manual",
+		"hasFallback": false
+	}
+]
