@@ -10,7 +10,8 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"hash-password": "node scripts/hash-password.mjs"
+		"hash-password": "node scripts/hash-password.mjs",
+		"audit:banners": "node scripts/audit-banners.mjs"
 	},
 	"dependencies": {
 		"@astrojs/vercel": "^10.0.5",

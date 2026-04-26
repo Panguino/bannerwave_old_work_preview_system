@@ -27,6 +27,20 @@ npm run dev
 - **Admin login:** [http://localhost:4321/admin/login](http://localhost:4321/admin/login)
 - **Public preview (example):** [http://localhost:4321/p/sample-300x250/](http://localhost:4321/p/sample-300x250/)
 
+## Audit local sources
+
+Point at your local banners folder (defaults to `C:\Users\brad\Desktop\Banners`):
+
+```bash
+npm run audit:banners
+```
+
+Writes **`docs/banner-inventory.md`**: every directory with an `index.html`, suggested import slug, inferred size, JPG count, heuristic fallback file guess, asset counts, and folder size.
+
+```bash
+node scripts/audit-banners.mjs "D:\other\banners" "./docs/custom-inventory.md"
+```
+
 ## Banners in the repo
 
 Each banner lives under `public/banners/<id>/` with `index.html` (and assets). Optional `fallback.jpg` for grid thumbnails; set `"hasFallback": true` in `src/data/banners.json` when that file exists.

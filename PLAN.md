@@ -107,7 +107,8 @@ node scripts/hash-password.mjs "your-plain-password"
 - [x] Login / logout API + JWT session cookie (`jose` + `bcryptjs`)
 - [x] Homepage (brand-aligned), admin login, admin grid, admin detail, public `/p/[id]`
 - [x] `src/data/banners.json` + types; sample unit `public/banners/sample-300x250/`
-- [ ] Audit script: scan `Desktop\Banners` → draft inventory + suggested keywords
+- [x] Audit script: `npm run audit:banners` → `docs/banner-inventory.md` (default: `Desktop\Banners`)
+- [ ] Suggested keywords column / heuristics (optional pass on inventory)
 - [ ] Import script: `import-banner` CLI → copy into repo + JSON row
 - [ ] `npm run inventory:md` — regenerate checklist MD from JSON
 - [ ] Animere/S3 import path (per separate instructions)
