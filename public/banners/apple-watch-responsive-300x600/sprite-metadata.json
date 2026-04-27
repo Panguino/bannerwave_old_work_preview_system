@@ -1,0 +1,690 @@
+{
+  "jpg": {
+    "sourceFiles": [
+      {
+        "name": "band-41-0@2x.jpg",
+        "size": 19986
+      },
+      {
+        "name": "band-41-10@2x.jpg",
+        "size": 56645
+      },
+      {
+        "name": "band-41-11@2x.jpg",
+        "size": 73017
+      },
+      {
+        "name": "band-41-12@2x.jpg",
+        "size": 58223
+      },
+      {
+        "name": "band-41-13@2x.jpg",
+        "size": 16713
+      },
+      {
+        "name": "band-41-14@2x.jpg",
+        "size": 19143
+      },
+      {
+        "name": "band-41-15@2x.jpg",
+        "size": 20483
+      },
+      {
+        "name": "band-41-16@2x.jpg",
+        "size": 17454
+      },
+      {
+        "name": "band-41-17@2x.jpg",
+        "size": 17251
+      },
+      {
+        "name": "band-41-18@2x.jpg",
+        "size": 14678
+      },
+      {
+        "name": "band-41-19@2x.jpg",
+        "size": 24728
+      },
+      {
+        "name": "band-41-1@2x.jpg",
+        "size": 14697
+      },
+      {
+        "name": "band-41-20@2x.jpg",
+        "size": 25217
+      },
+      {
+        "name": "band-41-21@2x.jpg",
+        "size": 26971
+      },
+      {
+        "name": "band-41-22@2x.jpg",
+        "size": 19733
+      },
+      {
+        "name": "band-41-23@2x.jpg",
+        "size": 50047
+      },
+      {
+        "name": "band-41-24@2x.jpg",
+        "size": 47582
+      },
+      {
+        "name": "band-41-25@2x.jpg",
+        "size": 45563
+      },
+      {
+        "name": "band-41-26@2x.jpg",
+        "size": 44475
+      },
+      {
+        "name": "band-41-27@2x.jpg",
+        "size": 51128
+      },
+      {
+        "name": "band-41-28@2x.jpg",
+        "size": 59608
+      },
+      {
+        "name": "band-41-29@2x.jpg",
+        "size": 46379
+      },
+      {
+        "name": "band-41-2@2x.jpg",
+        "size": 15341
+      },
+      {
+        "name": "band-41-30@2x.jpg",
+        "size": 54780
+      },
+      {
+        "name": "band-41-31@2x.jpg",
+        "size": 36221
+      },
+      {
+        "name": "band-41-32@2x.jpg",
+        "size": 33167
+      },
+      {
+        "name": "band-41-33@2x.jpg",
+        "size": 33950
+      },
+      {
+        "name": "band-41-34@2x.jpg",
+        "size": 67414
+      },
+      {
+        "name": "band-41-35@2x.jpg",
+        "size": 51474
+      },
+      {
+        "name": "band-41-36@2x.jpg",
+        "size": 52109
+      },
+      {
+        "name": "band-41-37@2x.jpg",
+        "size": 22545
+      },
+      {
+        "name": "band-41-38@2x.jpg",
+        "size": 19619
+      },
+      {
+        "name": "band-41-3@2x.jpg",
+        "size": 16049
+      },
+      {
+        "name": "band-41-4@2x.jpg",
+        "size": 14624
+      },
+      {
+        "name": "band-41-5@2x.jpg",
+        "size": 14565
+      },
+      {
+        "name": "band-41-6@2x.jpg",
+        "size": 41797
+      },
+      {
+        "name": "band-41-7@2x.jpg",
+        "size": 44438
+      },
+      {
+        "name": "band-41-8@2x.jpg",
+        "size": 48210
+      },
+      {
+        "name": "band-41-9@2x.jpg",
+        "size": 38403
+      },
+      {
+        "name": "band-45-0@2x.jpg",
+        "size": 21526
+      },
+      {
+        "name": "band-45-10@2x.jpg",
+        "size": 64675
+      },
+      {
+        "name": "band-45-11@2x.jpg",
+        "size": 82162
+      },
+      {
+        "name": "band-45-12@2x.jpg",
+        "size": 65144
+      },
+      {
+        "name": "band-45-13@2x.jpg",
+        "size": 17938
+      },
+      {
+        "name": "band-45-14@2x.jpg",
+        "size": 20567
+      },
+      {
+        "name": "band-45-15@2x.jpg",
+        "size": 22081
+      },
+      {
+        "name": "band-45-16@2x.jpg",
+        "size": 18922
+      },
+      {
+        "name": "band-45-17@2x.jpg",
+        "size": 18822
+      },
+      {
+        "name": "band-45-18@2x.jpg",
+        "size": 15823
+      },
+      {
+        "name": "band-45-19@2x.jpg",
+        "size": 26256
+      },
+      {
+        "name": "band-45-1@2x.jpg",
+        "size": 15502
+      },
+      {
+        "name": "band-45-20@2x.jpg",
+        "size": 27370
+      },
+      {
+        "name": "band-45-21@2x.jpg",
+        "size": 30619
+      },
+      {
+        "name": "band-45-22@2x.jpg",
+        "size": 22168
+      },
+      {
+        "name": "band-45-23@2x.jpg",
+        "size": 55921
+      },
+      {
+        "name": "band-45-24@2x.jpg",
+        "size": 52918
+      },
+      {
+        "name": "band-45-25@2x.jpg",
+        "size": 51230
+      },
+      {
+        "name": "band-45-26@2x.jpg",
+        "size": 49458
+      },
+      {
+        "name": "band-45-27@2x.jpg",
+        "size": 57054
+      },
+      {
+        "name": "band-45-28@2x.jpg",
+        "size": 67283
+      },
+      {
+        "name": "band-45-29@2x.jpg",
+        "size": 52085
+      },
+      {
+        "name": "band-45-2@2x.jpg",
+        "size": 15633
+      },
+      {
+        "name": "band-45-30@2x.jpg",
+        "size": 63076
+      },
+      {
+        "name": "band-45-31@2x.jpg",
+        "size": 40631
+      },
+      {
+        "name": "band-45-32@2x.jpg",
+        "size": 37027
+      },
+      {
+        "name": "band-45-33@2x.jpg",
+        "size": 38493
+      },
+      {
+        "name": "band-45-34@2x.jpg",
+        "size": 78089
+      },
+      {
+        "name": "band-45-35@2x.jpg",
+        "size": 58580
+      },
+      {
+        "name": "band-45-36@2x.jpg",
+        "size": 59274
+      },
+      {
+        "name": "band-45-37@2x.jpg",
+        "size": 24986
+      },
+      {
+        "name": "band-45-38@2x.jpg",
+        "size": 21559
+      },
+      {
+        "name": "band-45-3@2x.jpg",
+        "size": 16792
+      },
+      {
+        "name": "band-45-4@2x.jpg",
+        "size": 15284
+      },
+      {
+        "name": "band-45-5@2x.jpg",
+        "size": 15330
+      },
+      {
+        "name": "band-45-6@2x.jpg",
+        "size": 46098
+      },
+      {
+        "name": "band-45-7@2x.jpg",
+        "size": 49723
+      },
+      {
+        "name": "band-45-8@2x.jpg",
+        "size": 54301
+      },
+      {
+        "name": "band-45-9@2x.jpg",
+        "size": 42558
+      }
+    ]
+  },
+  "png": {
+    "sourceFiles": [
+      {
+        "name": "case-41-0@2x.png",
+        "size": 57630
+      },
+      {
+        "name": "case-41-1@2x.png",
+        "size": 57385
+      },
+      {
+        "name": "case-41-2@2x.png",
+        "size": 48093
+      },
+      {
+        "name": "case-41-3@2x.png",
+        "size": 60555
+      },
+      {
+        "name": "case-41-4@2x.png",
+        "size": 67019
+      },
+      {
+        "name": "case-41-5@2x.png",
+        "size": 50111
+      },
+      {
+        "name": "case-45-0@2x.png",
+        "size": 70269
+      },
+      {
+        "name": "case-45-1@2x.png",
+        "size": 63765
+      },
+      {
+        "name": "case-45-2@2x.png",
+        "size": 46995
+      },
+      {
+        "name": "case-45-3@2x.png",
+        "size": 64827
+      },
+      {
+        "name": "case-45-4@2x.png",
+        "size": 62861
+      },
+      {
+        "name": "case-45-5@2x.png",
+        "size": 56069
+      }
+    ]
+  },
+  "misc": {
+    "sourceFiles": [
+      {
+        "name": "animation.js",
+        "size": 18340
+      },
+      {
+        "name": "assets/arrow-L.svg",
+        "size": 492
+      },
+      {
+        "name": "assets/arrow-R.svg",
+        "size": 492
+      },
+      {
+        "name": "assets/band-name-0.svg",
+        "size": 16422
+      },
+      {
+        "name": "assets/band-name-1.svg",
+        "size": 17485
+      },
+      {
+        "name": "assets/band-name-10.svg",
+        "size": 24336
+      },
+      {
+        "name": "assets/band-name-11.svg",
+        "size": 25123
+      },
+      {
+        "name": "assets/band-name-12.svg",
+        "size": 26227
+      },
+      {
+        "name": "assets/band-name-13.svg",
+        "size": 19246
+      },
+      {
+        "name": "assets/band-name-14.svg",
+        "size": 18280
+      },
+      {
+        "name": "assets/band-name-15.svg",
+        "size": 20285
+      },
+      {
+        "name": "assets/band-name-16.svg",
+        "size": 16655
+      },
+      {
+        "name": "assets/band-name-17.svg",
+        "size": 19478
+      },
+      {
+        "name": "assets/band-name-18.svg",
+        "size": 14005
+      },
+      {
+        "name": "assets/band-name-19.svg",
+        "size": 20030
+      },
+      {
+        "name": "assets/band-name-2.svg",
+        "size": 15034
+      },
+      {
+        "name": "assets/band-name-20.svg",
+        "size": 18086
+      },
+      {
+        "name": "assets/band-name-21.svg",
+        "size": 24307
+      },
+      {
+        "name": "assets/band-name-22.svg",
+        "size": 22555
+      },
+      {
+        "name": "assets/band-name-23.svg",
+        "size": 17288
+      },
+      {
+        "name": "assets/band-name-24.svg",
+        "size": 18742
+      },
+      {
+        "name": "assets/band-name-25.svg",
+        "size": 15617
+      },
+      {
+        "name": "assets/band-name-26.svg",
+        "size": 18439
+      },
+      {
+        "name": "assets/band-name-27.svg",
+        "size": 19513
+      },
+      {
+        "name": "assets/band-name-28.svg",
+        "size": 18991
+      },
+      {
+        "name": "assets/band-name-29.svg",
+        "size": 19396
+      },
+      {
+        "name": "assets/band-name-3.svg",
+        "size": 18120
+      },
+      {
+        "name": "assets/band-name-30.svg",
+        "size": 19513
+      },
+      {
+        "name": "assets/band-name-31.svg",
+        "size": 11641
+      },
+      {
+        "name": "assets/band-name-32.svg",
+        "size": 8009
+      },
+      {
+        "name": "assets/band-name-33.svg",
+        "size": 12572
+      },
+      {
+        "name": "assets/band-name-34.svg",
+        "size": 16495
+      },
+      {
+        "name": "assets/band-name-35.svg",
+        "size": 19994
+      },
+      {
+        "name": "assets/band-name-36.svg",
+        "size": 15834
+      },
+      {
+        "name": "assets/band-name-37.svg",
+        "size": 12926
+      },
+      {
+        "name": "assets/band-name-38.svg",
+        "size": 21931
+      },
+      {
+        "name": "assets/band-name-4.svg",
+        "size": 14948
+      },
+      {
+        "name": "assets/band-name-5.svg",
+        "size": 17820
+      },
+      {
+        "name": "assets/band-name-6.svg",
+        "size": 27555
+      },
+      {
+        "name": "assets/band-name-7.svg",
+        "size": 26708
+      },
+      {
+        "name": "assets/band-name-8.svg",
+        "size": 23362
+      },
+      {
+        "name": "assets/band-name-9.svg",
+        "size": 22802
+      },
+      {
+        "name": "assets/btn-band.svg",
+        "size": 8882
+      },
+      {
+        "name": "assets/btn-case.svg",
+        "size": 8872
+      },
+      {
+        "name": "assets/btn-size.svg",
+        "size": 6537
+      },
+      {
+        "name": "assets/case-name-0.svg",
+        "size": 16446
+      },
+      {
+        "name": "assets/case-name-1.svg",
+        "size": 19232
+      },
+      {
+        "name": "assets/case-name-2.svg",
+        "size": 15018
+      },
+      {
+        "name": "assets/case-name-3.svg",
+        "size": 27231
+      },
+      {
+        "name": "assets/case-name-4.svg",
+        "size": 30731
+      },
+      {
+        "name": "assets/case-name-5.svg",
+        "size": 26900
+      },
+      {
+        "name": "assets/cta.svg",
+        "size": 9302
+      },
+      {
+        "name": "assets/jpg-element.jpg",
+        "size": 1494099
+      },
+      {
+        "name": "assets/jpg-element_2.jpg",
+        "size": 1036804
+      },
+      {
+        "name": "assets/logo.svg",
+        "size": 2087
+      },
+      {
+        "name": "assets/price-0.svg",
+        "size": 10466
+      },
+      {
+        "name": "assets/price-1.svg",
+        "size": 8344
+      },
+      {
+        "name": "assets/price-10.svg",
+        "size": 10783
+      },
+      {
+        "name": "assets/price-11.svg",
+        "size": 10412
+      },
+      {
+        "name": "assets/price-12.svg",
+        "size": 7502
+      },
+      {
+        "name": "assets/price-2.svg",
+        "size": 7186
+      },
+      {
+        "name": "assets/price-3.svg",
+        "size": 7430
+      },
+      {
+        "name": "assets/price-4.svg",
+        "size": 8973
+      },
+      {
+        "name": "assets/price-5.svg",
+        "size": 10848
+      },
+      {
+        "name": "assets/price-6.svg",
+        "size": 8592
+      },
+      {
+        "name": "assets/price-7.svg",
+        "size": 7434
+      },
+      {
+        "name": "assets/price-8.svg",
+        "size": 9221
+      },
+      {
+        "name": "assets/price-9.svg",
+        "size": 9785
+      },
+      {
+        "name": "assets/series.svg",
+        "size": 8827
+      },
+      {
+        "name": "assets/size-name-0.svg",
+        "size": 2825
+      },
+      {
+        "name": "assets/size-name-1.svg",
+        "size": 3738
+      },
+      {
+        "name": "config-banner.json",
+        "size": 483
+      },
+      {
+        "name": "index.html",
+        "size": 1064440
+      },
+      {
+        "name": "style.scss",
+        "size": 5281
+      },
+      {
+        "name": "style_vars.scss",
+        "size": 199
+      },
+      {
+        "name": "supplements/fallback.jpg",
+        "size": 39917
+      },
+      {
+        "name": "supplements/storyboard/Frame-0.png",
+        "size": 170019
+      },
+      {
+        "name": "supplements/storyboard/Frame-1.png",
+        "size": 211383
+      },
+      {
+        "name": "supplements/storyboard/Frame-2.png",
+        "size": 149161
+      }
+    ]
+  }
+}

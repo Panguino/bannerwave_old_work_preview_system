@@ -13,6 +13,11 @@
         <div class="border border-bottom"></div>
         <div class="border border-right"></div>
         <div class="border border-left"></div>
+        <div class="bw-yeti-chrome" aria-hidden="true">
+            <div class="bw-yeti-chrome-top"></div>
+            <div class="bw-yeti-chrome-score"></div>
+            <div class="bw-yeti-chrome-bottom"></div>
+        </div>
         <div class="stage">
             <!-- Start Animation HTML Code here -->
 <div class="float topBar">
@@ -99,6 +104,38 @@
              </div>
          </div>
         <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+        <style>
+            /* Full-bleed bar colors behind scaled .stage (see yeti-chrome-sync in animation) */
+            .bw-yeti-chrome {
+                position: absolute;
+                inset: 0;
+                z-index: 5;
+                pointer-events: none;
+                overflow: hidden;
+            }
+            .bw-yeti-chrome > div {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .bw-yeti-chrome-top {
+                background: #fff;
+            }
+            .bw-yeti-chrome-score {
+                background: #000;
+            }
+            .bw-yeti-chrome-bottom {
+                /* Matches .bottomBar white + .bottomBar2 black strip (~33/168) */
+                background: linear-gradient(
+                    to bottom,
+                    #fff 0%,
+                    #fff calc(100% * 135 / 168),
+                    #000 calc(100% * 135 / 168),
+                    #000 100%
+                );
+            }
+        </style>
         <script type="text/javascript" src="/vendor/createjs-2015.11.26.min.js"></script>
         <script type="text/javascript" src="/vendor/tweenmax-1.19.0.min.js"></script>
         <script type="text/javascript" src="animation.min.js"></script>
