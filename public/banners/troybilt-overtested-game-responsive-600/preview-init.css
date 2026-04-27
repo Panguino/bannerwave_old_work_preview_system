@@ -1,0 +1,358 @@
+/* After style.css. The MARC responsive sheet uses a full-bleed end card; the bundled
+   animation.min.js (shared with 300×600) never sets an initial Tween on .endframeContainer
+   and assumes the same *hidden* base state as troybilt-overtested-game-300x600:
+   width:0, parked off the right. Without this, the end frame covers intro + game. */
+html body .banner .stage .endframeContainer {
+	width: 0;
+	left: 100%;
+	right: auto;
+	overflow: hidden;
+}
+
+/* Landscape end row: space between copy column and video, clip video like 300×600 (object-fit + box) */
+html body .banner .stage .endframe-panel--landscape .bot {
+	width: 100% !important;
+	max-width: min(960px, 100%) !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding: 32px 20px 24px !important;
+	box-sizing: border-box !important;
+	gap: 32px;
+	column-gap: 32px;
+	row-gap: 20px;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+html body .banner .stage .endframe-panel--landscape .bot .overtested {
+	flex: 0 0 auto;
+	max-width: 42%;
+	min-width: 0;
+	box-sizing: border-box;
+	padding: 0 4px 0 0;
+}
+
+html body .banner .stage .endframe-panel--landscape .bot .overtested .overtestText {
+	margin-top: 40px;
+	width: 100% !important;
+	height: auto !important;
+	max-height: 158px;
+	object-fit: contain;
+	object-position: left center;
+}
+
+/* Lock video in a 16:9 box; object-fit: cover matches 300×600–style video behavior */
+html body .banner .stage .endframe-panel--landscape .endframe-video-wrap--landscape {
+	position: relative;
+	flex: 1 1 0;
+	min-width: 0;
+	background: #000;
+	overflow: hidden;
+	aspect-ratio: 16 / 9;
+	max-width: 55%;
+}
+
+html body .banner .stage .endframe-panel--landscape .endframe-video-wrap--landscape .endframe-video {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100% !important;
+	height: 100% !important;
+	max-width: none !important;
+	margin: 0;
+	object-fit: cover;
+	display: block;
+}
+
+/* Two end layouts: default = landscape (wide) panel; portrait = tall 300×600–style stack */
+html body .banner .stage .endframeContainer .endframe-panel--portrait {
+	display: none;
+}
+
+/* ——— Portrait: 300×600–width column centered in full–viewport red (matches unit; no white endFooter) ——— */
+@media (max-aspect-ratio: 1/1) {
+	/* .float = position:absolute. Do not set width/height here (GSAP + off-canvas base state). */
+	html body .banner .stage .endframeContainer {
+		display: flex;
+		flex-direction: column;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		/* When end card is open, tween sets 100vw/100vh; full red to edges */
+		background: #940000;
+		background: -moz-linear-gradient(left, #940000 0%, #c00 47%, #940000 100%);
+		background: -webkit-linear-gradient(left, #940000 0%, #c00 47%, #940000 100%);
+		background: linear-gradient(to right, #940000 0%, #c00 47%, #940000 100%);
+	}
+
+	html body .banner .stage .endframeContainer .endframe-panel--landscape {
+		display: none !important;
+	}
+
+	/* Fills the open end card; margin:auto on the column vertical-centers a 300×600–tall stack */
+	html body .banner .stage .endframeContainer .endframe-panel--portrait {
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+		align-items: center;
+		box-sizing: border-box;
+		width: 100%;
+		min-width: 0;
+		min-height: 100%;
+		margin: 0;
+		padding: max(8px, env(safe-area-inset-top)) 8px max(8px, env(safe-area-inset-bottom)) 8px;
+		background: #940000;
+		background: -moz-linear-gradient(left, #940000 0%, #c00 47%, #940000 100%);
+		background: -webkit-linear-gradient(left, #940000 0%, #c00 47%, #940000 100%);
+		background: linear-gradient(to right, #940000 0%, #c00 47%, #940000 100%);
+	}
+
+	/* 300px artboard (same as static IAB width); `max-width: 100%` for very narrow iframes */
+	html body .banner .stage .endframeContainer .endframe-300x600__column {
+		width: 300px;
+		max-width: 100%;
+		margin: auto;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-shrink: 0;
+		gap: 12px;
+	}
+
+	/* MARC “durability” line art, centered (left/right) in the column */
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-homedepot-300w {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-homedepot-300w .endframe-portrait__durability-img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: auto;
+		max-width: 100%;
+		height: auto;
+		max-height: 44px;
+		object-fit: contain;
+		object-position: center center;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-portrait__score {
+		width: 100%;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	/*
+	 * Portrait .endScore is NOT under .top .flex-container, so style.css never applied
+	 * the hazard frame / yellow inset / type rules — absolutely positioned .float stripes
+	 * then anchored to .stage, which breaks the border and stacks copy wrong.
+	 * Mirror .endframeContainer .top .flex-container .endScore{…} here.
+	 */
+	html body .banner .stage .endframeContainer .endframe-300x600 .endScore--portrait {
+		float: none;
+		flex-shrink: 1;
+		width: 100% !important;
+		max-width: 300px;
+		margin: 0 auto;
+		clear: both;
+		position: relative;
+		isolation: isolate;
+		background-color: #ffca00;
+		overflow: hidden;
+		box-shadow: 0 3px 10px #000;
+	}
+
+	/* Inset cover — must match MARC; without this the repeating stripe shows full-bleed */
+	html body .banner .stage .endframeContainer .endframe-300x600 .endScore--portrait .stripes-cover {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		background-color: #ffca00;
+		z-index: 21;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endScore--portrait .endstripes {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 110%;
+		height: 110%;
+		z-index: 20;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endScore--portrait .text {
+		position: relative;
+		z-index: 22;
+		width: 80%;
+		margin: 20px auto 8px;
+		display: table;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endScore--portrait .endScoreText {
+		position: relative;
+		z-index: 22;
+		color: #000;
+		font-family: DDCHardwareCondensed, sans-serif;
+		font-weight: 500;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 56px;
+		line-height: 1.05;
+		margin: 0 auto 4px;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endScore--portrait .play-again-button {
+		position: relative;
+		display: table;
+		z-index: 22;
+		background: #ffca00;
+		border-style: solid;
+		border-color: #000;
+		border-radius: 3px;
+		padding: 10px 18px;
+		cursor: pointer;
+		transition: all 0.2s ease-in;
+		margin: 12px auto 16px;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endScore--portrait .play-again-button .cta-play-again,
+	html body .banner .stage .endframeContainer .endframe-300x600 .endScore--portrait .play-again-button .cta-play-again-over {
+		height: 20px;
+		width: auto;
+		opacity: 1;
+		transition: all 0.2s ease-in;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endScore--portrait .play-again-button .cta-play-again-over {
+		opacity: 0;
+		top: 10px;
+		left: 18px;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endScore--portrait .play-again-button:hover {
+		background: #000;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endScore--portrait .play-again-button:hover .cta-play-again {
+		opacity: 0;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endScore--portrait .play-again-button:hover .cta-play-again-over {
+		opacity: 1;
+	}
+
+	/* endframe-text3 only (png-element IAB) */
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-overtest-300w {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 10px 4px 16px;
+		box-sizing: border-box;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-overtest-300w .endframe-text3 {
+		position: relative !important;
+		top: auto !important;
+		left: auto !important;
+		right: auto !important;
+		bottom: auto !important;
+		margin: 0;
+		flex-shrink: 0;
+	}
+
+	/* cta-endframe / #ad-container analog */
+	html body .banner .stage .endframeContainer .endframe-300x600__ad {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	/* “See how we test” as solid black CTA (portrait comp); not the red MARC endframe CTA */
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-portrait__cta {
+		position: relative;
+		display: table;
+		z-index: 22;
+		background: #000;
+		border: 0;
+		padding: 16px 36px;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: background 0.2s ease-in;
+		margin: 4px auto 0;
+		text-align: center;
+		width: auto;
+		max-width: 300px;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-portrait__cta .ctaSeeHowWeTest,
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-portrait__cta .ctaSeeHowWeTestOver {
+		height: 18px;
+		width: auto;
+		opacity: 1;
+		transition: opacity 0.2s ease-in;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-portrait__cta .ctaSeeHowWeTestOver {
+		opacity: 0;
+		top: 16px;
+		left: 36px;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-portrait__cta:hover {
+		background: #2a2a2a;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-portrait__cta:hover .ctaSeeHowWeTest {
+		opacity: 1;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-portrait__cta:hover .ctaSeeHowWeTestOver {
+		opacity: 0;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-video-wrap--portrait {
+		position: relative;
+		width: 100% !important;
+		max-width: 300px;
+		margin: 0 auto 0;
+		background: #000;
+		overflow: hidden;
+		box-sizing: border-box;
+		aspect-ratio: 16 / 9;
+	}
+
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-video-wrap--portrait .endframe-video {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100% !important;
+		height: 100% !important;
+		max-width: none !important;
+		margin: 0;
+		object-fit: cover;
+		display: block;
+	}
+}
+
+/* Do not use generic height:auto on all videos; wrappers own layout */
+html body .banner .stage .endframeContainer .endframe-video {
+	max-width: 100%;
+}
+
+@media (orientation: portrait) and (max-width: 900px) {
+	html body .banner .stage .endframeContainer .endframe-300x600 .endframe-video-wrap--portrait {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

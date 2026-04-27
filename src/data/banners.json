@@ -24,6 +24,18 @@
 		"notes": "Copied from Animere local build output: electron-local-banners/gamified-banners-PRJ-CVo7JG0r/apple-watch-300x600/build/ (excludes .zip). That tree changes often - re-copy from build/ if you refresh the banner."
 	},
 	{
+		"id": "apple-watch-responsive-300x600",
+		"name": "Apple Watch - Series 8 builder (responsive 300×600)",
+		"width": 300,
+		"height": 600,
+		"keywords": ["Apple", "Apple Watch", "HTML5", "retail", "300x600", "responsive"],
+		"suggestedKeywords": ["Series 8", "configurator", "gamified"],
+		"status": "ready",
+		"source": "animere",
+		"hasFallback": true,
+		"notes": "BW_Banner_Builder/electron-local-banners/gamified-banners-PRJ-CVo7JG0r/apple-watch-responsive-300x600/build/. Full-viewport height (100vh) in CSS. Vendors: /vendor/tweenmax; /banners/_ios-host-scroll-lock.js. fallback.jpg copied from apple-watch-300x600/build/fallback.jpg (fixed-size sibling build)."
+	},
+	{
 		"id": "go-comics-awkward-yeti-540x960",
 		"name": "GoComics - Awkward Yeti",
 		"width": 540,
@@ -106,6 +118,39 @@
 		"source": "desktop",
 		"hasFallback": true,
 		"notes": "Desktop/Banners/Bannerwave/troybilt/_snow_campaign-cleanup-300x600. Clicktag/Enabler references sanitized for preview; local shim handles Enabler APIs."
+	},
+	{
+		"id": "troybilt-snow-campaign-marc-2021",
+		"name": "Troy-Bilt - Snow Campaign (MARC 2021 microsite)",
+		"width": 300,
+		"height": 800,
+		"keywords": ["Troy-Bilt", "snow", "winter", "HTML5", "responsive", "game", "microsite"],
+		"suggestedKeywords": ["snow blower", "MARC", "sharing page"],
+		"status": "ready",
+		"source": "desktop",
+		"hasFallback": true,
+		"notes": "Responsive *page* shell (header, centered 300×600 game, footer) from https://github.com/BannerWave-LLC/MARC_Troybilt_SnowGame_site — ad unit is still 300×600; height 800 here fits shell in /p/ iframe. Reuses same assets/animation as troybilt-snow-campaign-cleanup-300x600. GTM omitted."
+	},
+	{
+		"id": "troybilt-overtested-game-responsive-600",
+		"name": "Troy-Bilt - Overtested game (responsive 600×600)",
+		"width": 600,
+		"height": 600,
+		"keywords": [
+			"Troy-Bilt",
+			"Overtested",
+			"spring 2019",
+			"HTML5",
+			"600x600",
+			"responsive",
+			"WebGL",
+			"game"
+		],
+		"suggestedKeywords": ["lawn mower", "3D", "MARC", "MARC 2019"],
+		"status": "ready",
+		"source": "desktop",
+		"hasFallback": true,
+		"notes": "Grabb: troy_bilt_game_responsive-600x600. Portrait: durability img centered → score → Overtest (endframe-text3 sprite) → video → black CTA. preview-endframe-panels.js. animation.min.js. preview-resize-boot.js. Vendors: createjs, tweenmax, _ios-host-scroll-lock."
 	}
 ]
 

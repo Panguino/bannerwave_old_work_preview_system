@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Troy-Bilt — Overtested game (responsive 600×600)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="x-ua-compatible" content="IE=Edge" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="preview-init.css" media="screen" />
+</head>
+<body class="document-body">
+<div class="wrapper" id="main-div">
+    <div class="banner">
+        <div class="border border-top"></div>
+        <div class="border border-bottom"></div>
+        <div class="border border-right"></div>
+        <div class="border border-left"></div>
+        <div class="stage clicktag">
+            <!-- Start Animation HTML Code here -->
+<script type="text/javascript" src="three.min.js"></script>
+<script type="text/javascript" src="GLTFLoader.min.js"></script>
+<script type="text/javascript" src="WebGL.js"></script>
+<script type="x-shader/x-vertex" id="vertexShader">
+  varying vec3 vWorldPosition;
+  void main() {
+  	vec4 worldPosition = modelMatrix * vec4( position, 1.0 );
+  	vWorldPosition = worldPosition.xyz;
+  	gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+  }
+</script>
+<script type="x-shader/x-fragment" id="fragmentShader">
+  uniform vec3 topColor;
+  uniform vec3 bottomColor;
+  uniform float offset;
+  uniform float exponent;
+  varying vec3 vWorldPosition;
+  void main() {
+  	float h = normalize( vWorldPosition + offset ).y;
+  	gl_FragColor = vec4( mix( bottomColor, topColor, max( pow( max( h , 0.0), exponent ), 0.0 ) ), 1.0 );
+  }
+</script>
+
+
+<div class="game"></div>
+
+<div class="header float">
+  <img class="logo-lockup" src="logo-lockup@2x.png" />
+</div>
+
+<div class="introFrame float">
+  <div class="float prompt1">
+    <div class="stripes float"></div>
+    <div class="float stripes-cover"></div>
+    <img class="float text" src="can-you-break-this-troy-bilt@2x.png" />
+    <div class="float playGame">
+      <img class="cta" src="ctaPlayGame@2x.png" />
+    </div>
+  </div>
+</div>
+
+<div class="float transitionWipe">
+  <div class="float gradientRed"></div>
+  <div class="png-element logoTransition"></div>
+</div>
+
+<div class="float prompt2">
+  <div class="stripes stripes2 float"></div>
+  <div class="float stripes-cover"></div>
+  <img class="float text" src="welcome-to-our-testing-ground@2x.png" />
+  <svg class="float timeCircleContainer" viewBox="0 0 106 106" width="100" height="100">
+    <circle id="timeCircle" cx="53" cy="53" r="49" />
+  </svg>
+  <div class="float countdown show"><span id="counter">5</span></div>
+</div>
+
+
+<div class="float arrows">
+  <img class="float arrows-desktop" src="arrows-desktop@2x.png" />
+  <img class="float arrows-mobile" src="arrows-mobile@2x.png" />
+</div>
+
+<div class="float testTitle">
+  <div class="stripes float"></div>
+  <div class="float stripes-cover"></div>
+  <div class="title">transmission hill</div>
+</div>
+
+<div class="float score show">0</div>
+
+<svg class="float clock show" viewBox="0 0 58 58" width="30" height="30">
+  <circle id="clock_body" fill="#fff" cx="29" cy="29" r="29" />
+  <circle id="clock_red" fill="#b31919" cx="29" cy="29" r="24" />
+  <circle id="clock_gray" class="circle" fill="none" stroke="#cecece" stroke-width="30px" cx="29" cy="29" r="10" />
+  <path id="clock_arm" fill="#fff"
+    d="M29,22a7,7,0,1,1-7,7A7,7,0,0,1,29,22Zm-4,5,2-16a2,2,0,0,1,4,0l2,16c0,1.1-2.9,2-4,2S25,28.1,25,27Z" />
+</svg>
+
+<div class="float lastFiveSecondsContainer">
+  <div class="png-element whiteCircle"></div>
+  <div id="lastFiveSecondsNumber" class="float">5</div>
+  <div class="float timesUp">Time's Up!</div>
+</div>
+
+
+<div class="float endframeContainer">
+  <div class="endframe-panel endframe-panel--landscape">
+    <div class="top">
+      <div class="flex-container">
+
+        <div class="endScore">
+          <div class="endstripes float"></div>
+          <div class="float stripes-cover"></div>
+          <img class="text" src="nice-work@2x.png" />
+          <div class="endScoreText endpoints">1532</div>
+          <div class="play-again-button">
+            <img class="cta-play-again" src="ctaPlayAgain@2x.png" />
+            <img class="cta-play-again-over float" src="ctaPlayAgain-over@2x.png" />
+          </div>
+        </div>
+
+        <div class="share">
+          <div class="sharebuttons">
+            <img class="shareScore" src="share-your-score@2x.png" />
+            <div class="social">
+              <img class="facebook" src="facebook@2x.png" />
+              <img class="twitter" src="twitter@2x.png" />
+            </div>
+          </div>
+          <img class="homedepot" src="durability-has-a-new-home@2x.png" />
+        </div>
+
+      </div>
+    </div>
+    <div class="bot">
+      <div class="overtested">
+        <img class="overtestText" src="overtest-so-it-wont-let-you-down@2x.png" />
+        <div class="cta cta-endframe-button">
+          <img class="ctaSeeHowWeTest" src="ctaSeeHowWeTest@2x.png" />
+          <img class="ctaSeeHowWeTestOver float" src="ctaSeeHowWeTest-over@2x.png" />
+        </div>
+      </div>
+      <div class="endframe-video-wrap endframe-video-wrap--landscape">
+        <video
+          class="endframe-video"
+          src="tb-video.mp4"
+          muted
+          playsinline
+          webkit-playsinline
+          controls
+          preload="metadata"
+        >
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portrait: durability line → nice work / score → Overtested headline → video → See how we test (black CTA) -->
+  <div class="endframe-panel endframe-panel--portrait endframe-300x600">
+    <div class="endframe-300x600__column">
+      <div class="endframe-portrait__homedepot endframe-homedepot-300w">
+        <img
+          class="endframe-portrait__durability-img"
+          src="durability-has-a-new-home@2x.png"
+          alt=""
+        />
+      </div>
+      <div class="endframe-portrait__score">
+        <div class="endScore endScore--portrait">
+          <div class="endstripes float"></div>
+          <div class="float stripes-cover"></div>
+          <img class="text" src="nice-work@2x.png" />
+          <div class="endScoreText endpoints">1532</div>
+          <div class="play-again-button">
+            <img class="cta-play-again" src="ctaPlayAgain@2x.png" />
+            <img class="cta-play-again-over float" src="ctaPlayAgain-over@2x.png" />
+          </div>
+        </div>
+      </div>
+      <div
+        class="endframe-portrait__headline endframe-overtest-300w"
+        role="img"
+        aria-label="Overtested. So it will not let you down."
+      >
+        <!-- endframe-text3: 300×600 IAB sprite (png-element.png) -->
+        <div class="png-element endframe-text3" aria-hidden="true"></div>
+      </div>
+      <div class="endframe-300x600__ad" id="portrait-300x600-ad">
+        <div class="endframe-video-wrap endframe-video-wrap--portrait">
+          <video
+            class="endframe-video"
+            src="tb-video.mp4"
+            muted
+            playsinline
+            webkit-playsinline
+            controls
+            preload="metadata"
+          >
+          </video>
+        </div>
+      </div>
+      <div class="cta cta-endframe-button endframe-portrait__cta">
+        <img class="ctaSeeHowWeTest" src="ctaSeeHowWeTest@2x.png" />
+        <img class="ctaSeeHowWeTestOver float" src="ctaSeeHowWeTest-over@2x.png" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;clip:rect(0,0,0,0)">
+  <div class="cta-button"></div>
+</div>
+
+
+<!-- End Animation HTML Code -->
+
+                </div>
+             </div>
+         </div>
+        <script type="text/javascript" src="/vendor/createjs-2015.11.26.min.js"></script>
+        <script type="text/javascript" src="/vendor/tweenmax-1.19.0.min.js"></script>
+        <script type="text/javascript" src="preview-endframe-panels.js"></script>
+        <script type="text/javascript" src="animation.min.js"></script>
+        <script type="text/javascript" src="preview-resize-boot.js"></script>
+        <script src="/banners/_ios-host-scroll-lock.js" defer></script>
+        <!-- CLICKTAGCODE -->
+        <!-- EXPAND CODE -->
+     </body>
+ </html>
+
