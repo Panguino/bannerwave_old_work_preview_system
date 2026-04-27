@@ -8,6 +8,12 @@ interface Props {
 	ogDescription?: string;
 	ogType?: string;
 	twitterCard?: 'summary' | 'summary_large_image';
+	/**
+	 * iOS touch/scroll: banner embeds in iframes fight page rubber-banding and scrolling.
+	 * - `full` — public `/p/:id/`: lock host page + inject styles into the banner document.
+	 * - `iframe` — admin (and similar): only inject + light wrapper; host page can still scroll.
+	 */
+	iosBannerLock?: 'full' | 'iframe';
 }
 
 const {
@@ -18,6 +24,7 @@ const {
 	ogDescription,
 	ogType = 'website',
 	twitterCard = 'summary_large_image',
+	iosBannerLock = undefined,
 } = Astro.props;
 
 const siteOrigin = Astro.url.origin;
@@ -34,13 +41,20 @@ const defaultOgImage = '/og-default.webp';
 const ogImageAbs = toAbsolute(ogImage ?? defaultOgImage);
 const metaTitle = ogTitle ?? title;
 const metaDescription = ogDescription ?? description;
+const viewportContent =
+	iosBannerLock === 'full'
+		? 'width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no'
+		: 'width=device-width, initial-scale=1';
 ---
 
 <!doctype html>
-<html lang="en">
+<html
+	lang="en"
+	class={iosBannerLock === 'full' ? 'bw-ios-banner-lock-full' : undefined}
+>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content={viewportContent} />
 		<meta name="description" content={metaDescription} />
 		<link rel="canonical" href={canonical} />
 		<meta property="og:site_name" content="BannerWave" />
@@ -121,6 +135,49 @@ const metaDescription = ogDescription ?? description;
 				background: var(--bw-bg-elevated);
 				border: 1px solid var(--bw-border);
 				border-radius: 12px;
+			}
+			/* Public banner preview: stop iOS page rubber-banding / scroll stealing from the iframe area */
+			html.bw-ios-banner-lock-full,
+			html.bw-ios-banner-lock-full body {
+				height: 100%;
+				max-height: 100%;
+			}
+			html.bw-ios-banner-lock-full {
+				overflow: hidden;
+				overscroll-behavior: none;
+			}
+			html.bw-ios-banner-lock-full body {
+				margin: 0;
+				width: 100%;
+				position: fixed;
+				inset: 0;
+				overflow: hidden;
+				overscroll-behavior: none;
+				-webkit-overflow-scrolling: auto;
+			}
+			.bw-banner-preview-stage {
+				box-sizing: border-box;
+				width: 100%;
+				height: 100%;
+				min-height: 100dvh;
+				padding: 1rem;
+				overflow: hidden;
+				overscroll-behavior: none;
+				touch-action: manipulation;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				background: radial-gradient(ellipse at center, #1a2a36 0%, #0a0f14 70%);
+			}
+			/* Admin (etc.): clip overscroll on the host around the ad only */
+			.bw-banner-embed-shim {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+				overscroll-behavior: none;
+				touch-action: manipulation;
 			}
 		</style>
 	</head>

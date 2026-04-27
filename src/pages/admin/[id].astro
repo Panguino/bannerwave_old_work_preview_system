@@ -10,7 +10,7 @@ if (!b) {
 }
 ---
 
-<BrandLayout title={b ? `${b.name} — Admin` : 'Not found'}>
+<BrandLayout title={b ? `${b.name} — Admin` : 'Not found'} iosBannerLock={b ? 'iframe' : undefined}>
 	{
 		b ? (
 			<div style="max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem 3rem;">
@@ -53,13 +53,16 @@ if (!b) {
 					class="bw-card"
 					style={`padding: 1rem; display: flex; justify-content: center; align-items: center; min-height: 12rem;`}
 				>
-					<iframe
-						src={bannerEntryUrl(b.id)}
-						title={b.name}
-						width={b.width}
-						height={b.height}
-						style="border: 0; max-width: 100%; background: #000;"
-					/>
+					<div class="bw-banner-embed-shim" style="width: 100%;">
+						<iframe
+							class="bw-banner-embed"
+							src={bannerEntryUrl(b.id)}
+							title={b.name}
+							width={b.width}
+							height={b.height}
+							style="border: 0; max-width: 100%; background: #000; display: block; margin: 0 auto;"
+						/>
+					</div>
 				</div>
 
 				{b.notes && (

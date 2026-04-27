@@ -22,13 +22,13 @@ const ogImage = b && b.hasFallback ? bannerFallbackUrl(b.id) : undefined;
 	ogTitle={b ? `${b.name} — Preview` : 'Preview not found — BannerWave'}
 	ogDescription={previewDescription}
 	ogImage={ogImage}
+	iosBannerLock={b ? 'full' : undefined}
 >
 	{
 		b ? (
-			<div
-				style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem; background: radial-gradient(ellipse at center, #1a2a36 0%, #0a0f14 70%);"
-			>
+			<div class="bw-banner-preview-stage">
 				<iframe
+					class="bw-banner-embed"
 					src={bannerEntryUrl(b.id)}
 					title={b.name}
 					width={b.width}
