@@ -984,3 +984,12 @@ body {
 .footer .cta-button:hover .btnIcon {
   fill: #FFFFFF;
 }
+
+/* Mobile tap: reliable pointer + no gray flash / double-tap zoom delay */
+.optionsContainer .optionBtn,
+.arrowsContainer .arrow-L,
+.arrowsContainer .arrow-R,
+.footer .cta-button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
