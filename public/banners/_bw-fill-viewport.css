@@ -1,0 +1,72 @@
+/* Full-window preview shell — use with _bw-viewport-fit.js and html/body.bw-fill-viewport. */
+
+html.bw-fill-viewport,
+body.bw-fill-viewport {
+	height: 100%;
+	margin: 0;
+}
+
+body.bw-fill-viewport {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+.bw-fill-viewport .wrapper {
+	width: 100vw;
+	height: 100vh;
+	height: 100dvh;
+	max-height: -webkit-fill-available;
+	position: relative;
+	-webkit-transform: translateZ(0);
+}
+
+.bw-fill-viewport .banner {
+	width: 100% !important;
+	height: 100% !important;
+	max-width: 100vw;
+	max-height: 100vh;
+	overflow: visible;
+}
+
+.bw-fill-viewport .banner .border {
+	display: none;
+}
+
+.bw-fill-viewport .banner .stage {
+	left: 0;
+	top: 0;
+	transform-origin: 0 0;
+}
+
+/* Troy-Bilt snow cleanup: clip scaled creative (default banner uses overflow:visible above) */
+html.bw-fill-clip.bw-fill-viewport .banner {
+	overflow: hidden;
+}
+
+html.bw-fill-clip.bw-fill-viewport .banner .stage {
+	overflow: hidden;
+}
+
+/* FedEx truck: #fedex wrapped in .bw-fill-wrapper */
+.bw-fill-viewport .bw-fill-wrapper {
+	width: 100vw;
+	height: 100vh;
+	height: 100dvh;
+	max-height: -webkit-fill-available;
+	position: relative;
+	-webkit-transform: translateZ(0);
+}
+
+.bw-fill-viewport #fedex {
+	transform-origin: 0 0;
+}
+
+.bw-fill-viewport #fedex #border_top,
+.bw-fill-viewport #fedex #border_btm,
+.bw-fill-viewport #fedex #border_left,
+.bw-fill-viewport #fedex #border_right {
+	display: none;
+}

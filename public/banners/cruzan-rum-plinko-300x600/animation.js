@@ -1,19 +1,20 @@
-function getPageXY(e) {
-	if (e.pageX != null && e.pageY != null) {
-		return { x: e.pageX, y: e.pageY };
-	}
-	var t = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]);
-	if (t) {
-		return { x: t.pageX, y: t.pageY };
-	}
-	return { x: 0, y: 0 };
-}
+var BW_STAGE_DESIGN_W = 300;
+var BW_STAGE_DESIGN_H = 600;
 
 function followPointer(e) {
 	hasInteracted = true;
-	var p = getPageXY(e);
-	xPos = p.x;
-	yPos = p.y;
+	var stageNode = document.querySelector(".banner .stage");
+	var rect = stageNode ? stageNode.getBoundingClientRect() : { left: 0, top: 0, width: BW_STAGE_DESIGN_W };
+	var scale = rect.width / BW_STAGE_DESIGN_W;
+	if (!scale || !isFinite(scale)) scale = 1;
+	var cx = e.clientX;
+	var cy = e.clientY;
+	if (e.touches && e.touches[0]) {
+		cx = e.touches[0].clientX;
+		cy = e.touches[0].clientY;
+	}
+	xPos = (cx - rect.left) / scale;
+	yPos = (cy - rect.top) / scale;
 	mouseoffsetY = 222;
 	mouseoffsetX = 89;
 	TweenLite.set(token, { x: xPos - mouseoffsetX + "px", y: yPos - mouseoffsetY + "px" });
@@ -290,3 +291,29 @@ setTimeout(function() {
 	if (!hasInteracted) TweenLite.to(token, 0.5, { y: 50 - offsetY, onComplete: dropToken });
 }, autoPlayStart);
 var theCount = 0;
+
+(function bwViewportFitStage() {
+	if (!document.body.classList.contains("bw-fill-viewport")) return;
+	var stageEl = document.querySelector(".banner .stage");
+	if (!stageEl) return;
+	function fit() {
+		var vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+		var vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		var s = Math.min(vw / BW_STAGE_DESIGN_W, vh / BW_STAGE_DESIGN_H);
+		var x = Math.floor((vw - BW_STAGE_DESIGN_W * s) / 2);
+		var y = Math.floor((vh - BW_STAGE_DESIGN_H * s) / 2);
+		TweenLite.set(stageEl, {
+			scale: s,
+			transformOrigin: "0 0",
+			x: x,
+			y: y,
+			force3D: true
+		});
+	}
+	window.addEventListener("resize", fit);
+	window.addEventListener("orientationchange", fit);
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", fit);
+	}
+	requestAnimationFrame(fit);
+})();
