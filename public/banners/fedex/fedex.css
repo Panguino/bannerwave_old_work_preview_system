@@ -1,7 +1,7 @@
 /*--------------------- Globals ---------------------*/
 :focus { outline:none; }
 ::-moz-focus-inner { border:0; }
-html, body { background-color: #fff; margin: 0; padding: 0; }
+html, body { background-color: #000; margin: 0; padding: 0; }
 #fedex { background-color: #b5ddf1; position: absolute; top: 0px; left: 0px; width: 300px; height: 600px; overflow: hidden;
 font-family: 'Gotham';
 color: white;
@@ -106,7 +106,7 @@ background: #b5ddf1;
 #fedex #loading img { width: 60px; height: 60px; top: 50%; left: 50%; margin: -30px 0 0 -30px; }
 #fedex .hide { display: none; }
 
-/* Letterboxing matches sky when the truck unit is scaled in full-window preview */
+/* Letterboxing: black outside the 300×600 unit; sky stays on #fedex */
 body.bw-fill-viewport {
-	background-color: #b5ddf1;
+	background-color: #000;
 }
