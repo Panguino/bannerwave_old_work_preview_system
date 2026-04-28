@@ -79,7 +79,7 @@ html body .banner .stage .endframeContainer .endframe-panel--portrait {
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
-		/* When end card is open, tween sets 100vw/100vh; full red to edges */
+		/* When end card is open, tween sets 100dvw/100dvh (see style.css / animation GSAP); full red to edges */
 		background: #940000;
 		background: -moz-linear-gradient(left, #940000 0%, #c00 47%, #940000 100%);
 		background: -webkit-linear-gradient(left, #940000 0%, #c00 47%, #940000 100%);

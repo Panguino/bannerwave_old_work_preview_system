@@ -17,6 +17,21 @@
 		setTimeout(nudge, 150);
 		setTimeout(nudge, 500);
 	});
+	/* Mobile: URL bar show/hide updates visualViewport, not always window.innerHeight — keep WebGL sized */
+	var vvScheduled = null;
+	function scheduleFromVisualViewport() {
+		if (vvScheduled != null) {
+			return;
+		}
+		vvScheduled = window.requestAnimationFrame(function () {
+			vvScheduled = null;
+			runResize();
+		});
+	}
+	if (window.visualViewport) {
+		window.visualViewport.addEventListener("resize", scheduleFromVisualViewport);
+		window.visualViewport.addEventListener("scroll", scheduleFromVisualViewport);
+	}
 	/* After Play inits o(), camera+renderer exist — poll a few seconds for manual timing skew */
 	var poll = 0;
 	var t = setInterval(function () {
