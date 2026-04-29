@@ -9,7 +9,20 @@
 (function () {
 	var STYLE_ID = "bw-ios-host-scroll-lock";
 
+	function inIframe() {
+		try {
+			return window.self !== window.top;
+		} catch (e) {
+			return true;
+		}
+	}
+
 	function apply() {
+		/* Preview (/p/:id/) already locks the host page (BrandLayout). Fixing body inside
+		   the iframe too breaks layout on iOS Safari (nested fixed → white / zero-height). */
+		if (inIframe()) {
+			return;
+		}
 		if (document.getElementById(STYLE_ID)) {
 			return;
 		}

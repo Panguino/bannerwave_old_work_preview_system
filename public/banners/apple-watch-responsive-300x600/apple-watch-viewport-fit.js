@@ -57,6 +57,9 @@
 			y: y,
 			force3D: true
 		});
+		if (typeof documentHeight === "function") {
+			documentHeight();
+		}
 	}
 
 	function ready() {
