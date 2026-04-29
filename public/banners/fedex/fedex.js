@@ -21,7 +21,7 @@ saved,
 replay = false,
 run_tetris,
 handle_keydown,
-handle_swipe,
+handle_panend,
 handle_tap,
 add_listeners,
 remove_listeners,
@@ -80,6 +80,19 @@ function imageLoaded() {
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
+
+/** True when we should attach Hammer (touch / coarse pointer), not only legacy orientation sniffing. */
+function supportsTouchGestures() {
+	if (navigator.maxTouchPoints > 0) {
+		return true;
+	}
+	try {
+		if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) {
+			return true;
+		}
+	} catch (e) {}
+	return isMobileDevice();
+}
 
 init = function(){
 	cta = document.querySelector('.cta');
@@ -651,21 +664,23 @@ window.onload = preloadImages();
 		add_listeners();
 	};
 	add_listeners=function(){
-		if(isMobileDevice()) {
-	        mc = new Hammer.Manager(document.getElementById('fedex'));
-	        mc.add(new Hammer.Swipe({direction:Hammer.DIRECTION_ALL,threshold:1}));
-	        mc.add(new Hammer.Tap({event:'tap',taps:1}));
-	        mc.on('swipe',handle_swipe);
-	        mc.on('tap',handle_tap);
-        } else {
-	        document.addEventListener('keydown',handle_keydown);
-        }
+		document.addEventListener('keydown',handle_keydown);
+		if (supportsTouchGestures()) {
+			var el = document.getElementById('fedex');
+			mc = new Hammer.Manager(el);
+			var pan = new Hammer.Pan({ direction: Hammer.DIRECTION_ALL, threshold: 12 });
+			var tap = new Hammer.Tap({ event: 'tap', taps: 1 });
+			mc.add([pan, tap]);
+			tap.requireFailure(pan);
+			mc.on('panend', handle_panend);
+			mc.on('tap', handle_tap);
+		}
 	};
 	remove_listeners=function(){
-		if(isMobileDevice()) {
+		document.removeEventListener('keydown',handle_keydown);
+		if (mc) {
 			mc.destroy();
-		} else {
-			document.removeEventListener('keydown',handle_keydown);	
+			mc = null;
 		}
 	};
 	handle_keydown=function(e){
@@ -686,19 +701,24 @@ window.onload = preloadImages();
 			}
 		}
 	};
-	handle_swipe=function(e){
-		if(gameRun) {
-			if(e.direction===2){
-				playerMove(-move);
-			}
-			else if(e.direction===4){
-				playerMove(+move);
-			}
-			else if(e.direction===16){
-				if(gameRun){
-					playerDrop();
-				}
-			}
+	handle_panend=function(e){
+		if (!gameRun) {
+			return;
+		}
+		var dx = e.deltaX;
+		var dy = e.deltaY;
+		var ax = Math.abs(dx);
+		var ay = Math.abs(dy);
+		var vx = Math.abs(e.velocityX || 0);
+		var vy = Math.abs(e.velocityY || 0);
+		var downIntent = dy > 0 && ay > ax * 1.05 && (ay > 20 || vy > 0.35);
+		var horizIntent =
+			(ax > ay * 0.75 && (ax > 14 || vx > 0.28)) ||
+			(ax > 10 && vx > 0.45 && ax >= ay * 0.55);
+		if (downIntent && !horizIntent) {
+			playerDrop();
+		} else if (horizIntent) {
+			playerMove(dx < 0 ? -move : move);
 		}
 	};
 	handle_tap=function(e){
