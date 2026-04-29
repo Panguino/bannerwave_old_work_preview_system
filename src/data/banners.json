@@ -120,6 +120,18 @@
 		"notes": "Desktop/Banners/Bannerwave/troybilt/_snow_campaign-cleanup-300x600. Clicktag/Enabler references sanitized for preview; local shim handles Enabler APIs."
 	},
 	{
+		"id": "troybilt-snow-campaign-no-splash-300x600",
+		"name": "Troy-Bilt - Snow Campaign (No splash)",
+		"width": 300,
+		"height": 600,
+		"keywords": ["Troy-Bilt", "snow", "winter", "HTML5", "300x600", "game", "Marcus Thomas"],
+		"suggestedKeywords": ["snow blower", "campaign", "interactive"],
+		"status": "ready",
+		"source": "desktop",
+		"hasFallback": true,
+		"notes": "marc-20-001_troy-bilt_2020_snow/snow_campaign-300x600 (no splash / alternate art & copy). Preview: Enabler shim, /vendor createjs+tweenmax, _bw-fill-viewport + _bw-viewport-fit, body black / stage white, canvas-relative spout particles."
+	},
+	{
 		"id": "troybilt-snow-campaign-marc-2021",
 		"name": "Troy-Bilt - Snow Campaign (MARC 2021 microsite)",
 		"width": 300,
