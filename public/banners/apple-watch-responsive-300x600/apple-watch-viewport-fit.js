@@ -15,13 +15,28 @@
 
 	function getViewport() {
 		var vv = window.visualViewport;
+		var vw, vh;
 		if (vv && vv.width > 0 && vv.height > 0) {
-			return { vw: vv.width, vh: vv.height };
+			vw = vv.width;
+			vh = vv.height;
+		} else {
+			vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+			vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 		}
-		return {
-			vw: Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
-			vh: Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-		};
+		/* iOS Chrome (CriOS): bogus 0 / tiny innerHeight & visualViewport inside same-origin iframes → scale 0 → white screen */
+		if (vh < 200 || vw < 200) {
+			try {
+				if (window.top && window.top !== window.self) {
+					var tw = window.top.innerWidth;
+					var th = window.top.innerHeight;
+					if (th > vh) vh = th;
+					if (tw > vw) vw = tw;
+				}
+			} catch (e) {}
+		}
+		if (vh < 200) vh = DESIGN_H;
+		if (vw < 200) vw = DESIGN_W;
+		return { vw: vw, vh: vh };
 	}
 
 	function fit() {
@@ -48,6 +63,7 @@
 		document.documentElement.style.setProperty("--doc-height", DESIGN_H + "px");
 
 		var s = Math.min(vw / DESIGN_W, vh / DESIGN_H);
+		if (!isFinite(s) || s <= 0) s = 1;
 		var x = Math.floor((vw - DESIGN_W * s) / 2);
 		var y = Math.floor((vh - DESIGN_H * s) / 2);
 		TL.set(root, {

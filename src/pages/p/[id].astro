@@ -33,7 +33,8 @@ const ogImage = b && b.hasFallback ? bannerFallbackUrl(b.id) : undefined;
 					title={b.name}
 					width={b.width}
 					height={b.height}
-					style="border: 0; box-shadow: 0 12px 48px rgba(0,0,0,0.45); max-width: 100%; background: #000;"
+					loading="eager"
+					style={`border: 0; box-shadow: 0 12px 48px rgba(0,0,0,0.45); max-width: 100%; background: #000; flex-shrink: 0; min-width: 1px; min-height: min(100dvh, ${b.height}px);`}
 				/>
 				<p style="margin-top: 1rem; font-size: 0.75rem; color: var(--bw-muted);">
 					{b.name} · {b.width}×{b.height}
